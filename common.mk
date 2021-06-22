@@ -431,6 +431,11 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.voice-V2-ndk.vendor \
     librmnetctl
 
+# The default value of this variable is false and should only be set to true when
+# the device allows users to retain eSIM profiles after factory reset of user data.
+PRODUCT_PRODUCT_PROPERTIES += \
+    masterclear.allow_retain_esim_profiles_after_fdr=true
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.frameworks.sensorservice-V1-ndk.vendor \
