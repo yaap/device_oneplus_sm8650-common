@@ -392,6 +392,10 @@ TARGET_BOARD_PLATFORM := pineapple
 PRODUCT_PACKAGES += \
     vendor.lineage.powershare@1.0-service.oplus
 
+# Protobuf
+PRODUCT_PACKAGES += \
+    libprotobuf-cpp-full-3.9.1-vendorcompat
+
 # QMI
 PRODUCT_PACKAGES += \
     libjson \
