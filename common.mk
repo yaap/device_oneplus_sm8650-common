@@ -288,6 +288,7 @@ PRODUCT_PACKAGES += \
     init.qcom.sh \
     init.target.rc \
     ueventd.oplus.rc \
+    loggy.rc \
     ueventd.qcom.rc
 
 # IR Blaster

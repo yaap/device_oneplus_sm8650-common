@@ -51,6 +51,12 @@ prebuilt_etc {
     vendor: true,
 }
 
+prebuilt_etc {
+    name: "loggy.rc",
+    src: "loggy.rc",
+    sub_dir: "init/hw",
+}
+
 sh_binary {
     name: "init.class_main.sh",
     src: "init.class_main.sh",
