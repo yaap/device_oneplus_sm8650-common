@@ -1,42 +1,17 @@
 <compatibility-matrix version="2.0" type="framework">
-    <hal format="hidl" optional="true">
-        <name>vendor.oplus.hardware.biometrics.fingerprint</name>
-        <version>2.1</version>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.biometrics.fingerprint</name>
         <interface>
-            <name>IBiometricsFingerprint</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.oplus.hardware.cwb</name>
-        <version>1.0</version>
-        <interface>
-            <name>ICwbService</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="hidl" optional="true">
-        <name>vendor.pixelworks.hardware.display</name>
-        <version>1.0-2</version>
-        <interface>
-            <name>IIris</name>
+            <name>IFingerprint</name>
             <instance>default</instance>
         </interface>
     </hal>
     <hal format="aidl" optional="true">
         <name>vendor.oplus.hardware.appradioaidl</name>
-        <version>1</version>
         <interface>
             <name>IAppRadioStable</name>
             <instance>OplusAppRadio0</instance>
             <instance>OplusAppRadio1</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
-        <name>vendor.oplus.hardware.cameraextension</name>
-        <interface>
-            <name>ICameraExtensionService</name>
-            <instance>default</instance>
         </interface>
     </hal>
     <hal format="aidl" optional="true">
@@ -50,6 +25,28 @@
         <name>vendor.oplus.hardware.communicationcenter</name>
         <interface>
             <name>IDmtpService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.oplus.hardware.cwb</name>
+        <version>1.0</version>
+        <interface>
+            <name>ICwbService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.oplus.hardware.cwb</name>
+        <interface>
+            <name>ICwbService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.oplus.hardware.camera_rfi</name>
+        <interface>
+            <name>ICameraRfiService</name>
             <instance>default</instance>
         </interface>
     </hal>
@@ -70,6 +67,7 @@
     </hal>
     <hal format="aidl" optional="true">
         <name>vendor.oplus.hardware.radio</name>
+        <version>2</version>
         <interface>
             <name>IRadioStable</name>
             <instance>OplusRadio0</instance>
@@ -78,6 +76,7 @@
     </hal>
     <hal format="aidl" optional="true">
         <name>vendor.oplus.hardware.sendextcamcmd</name>
+        <version>2</version>
         <interface>
             <name>ISendExtCamCmdService</name>
             <instance>default</instance>
@@ -92,6 +91,14 @@
     </hal>
     <hal format="aidl" optional="true">
         <name>vendor.pixelworks.hardware.display</name>
+        <interface>
+            <name>IIris</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.pixelworks.hardware.display</name>
+        <version>1.0-2</version>
         <interface>
             <name>IIris</name>
             <instance>default</instance>

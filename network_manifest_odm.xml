@@ -4,17 +4,7 @@
 -->
 <manifest version="2.0" type="device">
     <hal format="aidl">
-        <name>vendor.oplus.hardware.appradioaidl</name>
-        <version>1</version>
-        <interface>
-            <name>IAppRadioStable</name>
-            <instance>OplusAppRadio0</instance>
-            <instance>OplusAppRadio1</instance>
-        </interface>
-    </hal>
-    <hal format="aidl">
         <name>vendor.oplus.hardware.ims</name>
-        <version>1</version>
         <interface>
             <name>IImsStable</name>
             <instance>OplusImsRadio0</instance>
@@ -23,7 +13,7 @@
     </hal>
     <hal format="aidl">
         <name>vendor.oplus.hardware.radio</name>
-        <version>1</version>
+        <version>2</version>
         <interface>
             <name>IRadioStable</name>
             <instance>OplusRadio0</instance>
