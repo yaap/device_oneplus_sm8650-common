@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2022-2023 The LineageOS Project
+# Copyright (C) 2022-2024 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -18,11 +18,11 @@ firmware_directories /mnt/vendor/persist/display/
 
 # Reserve
 /dev/block/bootdevice/by-name/oplusreserve1    0660    root    system
-/dev/block/sdf9   0660   root     system
+/dev/block/sdf2   0660   root     system
 /dev/block/bootdevice/by-name/oplusreserve3    0660    root    system
-/dev/block/sdf11   0660   root     system
+/dev/block/sdf4   0660   root     system
 /dev/block/bootdevice/by-name/oplusreserve5    0660    root    system
-/dev/block/sdf13   0660   root     system
+/dev/block/sdf6   0660   root     system
 
 # WiFi
 firmware_directories /mnt/vendor/persist/copy/ /odm/etc/wifi/ /mnt/vendor/persist/

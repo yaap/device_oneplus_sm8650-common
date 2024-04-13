@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2022-2023 The LineageOS Project
+# Copyright (C) 2022-2024 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
@@ -18,8 +18,13 @@ on boot
 
     chmod 0000 /sys/kernel/oplus_display/hbm
 
+    # Audio HAL feedback
+    chown media media /proc/mm_fb
+
     # Sensors
     chown system system /sys/devices/platform/soc/soc:sensor_fb/adsp_notify
+    chmod 0666 /sys/devices/platform/soc/soc:sensor_fb/adsp_notify
+    chmod 0666 /dev/oplus_consumer_ir
 
 on post-fs-data
     # ADSP ramdump
@@ -28,34 +33,76 @@ on post-fs-data
     mkdir /data/vendor/mmdump/adsp 0777 system system
     chmod 0777 /data/vendor/mmdump/adsp
 
+    # Camera
+    mkdir /mnt/vendor/persist 0771 root system
+    chown cameraserver cameraserver /mnt/vendor/persist/camera/dual_calibration/stereoParams.bin
+    chown cameraserver cameraserver /mnt/vendor/persist/camera/front_dual_calibration/stereoParams.bin
+    chmod 0666 /mnt/vendor/persist/camera/dual_calibration/stereoParams.bin
+    chmod 0666 /mnt/vendor/persist/camera/front_dual_calibration/stereoParams.bin
+    chown cameraserver cameraserver /mnt/vendor/persist/camera/spectrum_cali_data
+    chown cameraserver cameraserver /mnt/vendor/persist/camera/spectrum_test_data
+    chmod 0666 /mnt/vendor/persist/camera/spectrum_cali_data
+    chmod 0666 /mnt/vendor/persist/camera/spectrum_test_data
+    chown cameraserver cameraserver /mnt/vendor/persist/camera/spectrum_sn.json
+    chown cameraserver cameraserver /mnt/vendor/persist/camera/cm_tcs3449_*
+    chmod 0666 /mnt/vendor/persist/camera/spectrum_sn.json
+    chmod 0666 /mnt/vendor/persist/camera/cm_tcs3449_*
+    mkdir /data/system/camera_rus 0777 cameraserver  cameraserver
+    chown system system /sys/kernel/ois_control/dump_registers
+
 on property:ro.boot.prjname=*
     # Display
     setprop ro.separate.soft ${ro.boot.prjname}
 
-on property:ro.boot.prjname=22811
-    setprop persist.vendor.display.pxlw.iris_feature 0x407f0780
-
-on property:ro.boot.prjname=22861
-    setprop persist.vendor.display.pxlw.iris_feature 0x400080
-
 on property:sys.boot_completed=1
+    # Charger
+    chown system system /sys/module/oplus_gauge/parameters/gauge_dbg_tbat
+    chown system system /sys/module/oplus_gauge/parameters/gauge_dbg_ibat
+    chown system system /sys/module/oplus_gauge/parameters/gauge_dbg_soc
+    chown system system /sys/module/oplus_gauge/parameters/gauge_dbg_vbat
+    chown system system /sys/module/oplus_gauge/parameters/sub_gauge_dbg_ibat
+    chown system system /sys/module/oplus_gauge/parameters/sub_gauge_dbg_tbat
+    chown system system /sys/module/oplus_gauge/parameters/sub_gauge_dbg_vbat
+    chown system system /sys/module/oplus_chg/parameters/gauge_dbg_tbat
+    chown system system /sys/module/oplus_chg/parameters/gauge_dbg_ibat
+    chown system system /sys/module/oplus_chg/parameters/gauge_dbg_soc
+    chown system system /sys/module/oplus_chg/parameters/gauge_dbg_vbat
+    chown system system /sys/module/oplus_chg/parameters/sub_gauge_dbg_ibat
+    chown system system /sys/module/oplus_chg/parameters/sub_gauge_dbg_tbat
+    chown system system /sys/module/oplus_chg/parameters/sub_gauge_dbg_vbat
+    chown system system /sys/module/oplus_chg_v2/parameters/gauge_dbg_tbat
+
     # Display
-    copy /vendor/etc/Oplus_QC_LTM_SM8550_2022_10_13.pfm /mnt/vendor/persist/data/pfm/licenses/Oplus_QC_LTM_SM8550_2022_10_13.pfm
-    chmod 0600 /mnt/vendor/persist/data/pfm/licenses/Oplus_QC_LTM_SM8550_2022_10_13.pfm
-    chown system system /mnt/vendor/persist/data/pfm/licenses/Oplus_QC_LTM_SM8550_2022_10_13.pfm
+    copy /vendor/etc/oem_51_prj_OppoLTM8650_1689712162019.pfm /mnt/vendor/persist/data/pfm/licenses/oem_51_prj_OppoLTM8650_1689712162019.pfm
+    chmod 0600 /mnt/vendor/persist/data/pfm/licenses/oem_51_prj_OppoLTM8650_1689712162019.pfm
+    chown system system /mnt/vendor/persist/data/pfm/licenses/oem_51_prj_OppoLTM8650_1689712162019.pfm
+
+    # Network
+    copy /vendor/etc/O_STX_platform_license.pfm /mnt/vendor/persist/data/pfm/licenses/O_STX_platform_license.pfm
+    chmod 0600 /mnt/vendor/persist/data/pfm/licenses/O_STX_platform_license.pfm
+    chown system system /mnt/vendor/persist/data/pfm/licenses/O_STX_platform_license.pfm
+
+    copy /odm/etc/oem_stx_platform_license.pfm /mnt/vendor/persist/data/pfm/licenses/oem_stx_platform_license.pfm
+    chmod 0600 /mnt/vendor/persist/data/pfm/licenses/oem_stx_platform_license.pfm
+    chown system system /mnt/vendor/persist/data/pfm/licenses/oem_stx_platform_license.pfm
+
+    copy /vendor/etc/O_TDD-Bypass_platform_license.pfm /mnt/vendor/persist/data/pfm/licenses/O_TDD-Bypass_platform_license.pfm
+    chmod 0600 /mnt/vendor/persist/data/pfm/licenses/O_TDD-Bypass_platform_license.pfm
+    chown system system /mnt/vendor/persist/data/pfm/licenses/O_TDD-Bypass_platform_license.pfm
 
     # Widevine
     copy /vendor/etc/oplus_Widevine_licenses.pfm /mnt/vendor/persist/data/pfm/licenses/oplus_Widevine_licenses.pfm
     chmod 0600 /mnt/vendor/persist/data/pfm/licenses/oplus_Widevine_licenses.pfm
     chown system system /mnt/vendor/persist/data/pfm/licenses/oplus_Widevine_licenses.pfm
 
+# USB compositions
 on property:sys.usb.config=adb && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/idVendor 0x22D9
     write /config/usb_gadget/g1/idProduct 0x2769
 
 on property:sys.usb.config=mass_storage && property:sys.usb.configfs=1
-    write /config/usb_gadget/g1/idProduct 0x2768
     write /config/usb_gadget/g1/idVendor 0x22D9
+    write /config/usb_gadget/g1/idProduct 0x2768
 
 on property:sys.usb.config=mtp && property:sys.usb.configfs=1
     write /config/usb_gadget/g1/idVendor 0x22D9
