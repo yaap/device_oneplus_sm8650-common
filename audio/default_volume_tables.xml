@@ -53,22 +53,22 @@
         <point>100,0</point>
     #else /* OPLUS_BUG_STABILITY */ -->
         <point>1,-7000</point>
-        <point>10,-6100</point>
-        <point>20,-5500</point>
-        <point>30,-4900</point>
-        <point>40,-4400</point>
-        <point>50,-3800</point>
-        <point>60,-3200</point>
-        <point>70,-2860</point>
-        <point>80,-2560</point>
-        <point>90,-2260</point>
-        <point>100,-1960</point>
-        <point>110,-1650</point>
-        <point>120,-1350</point>
+        <point>10,-6200</point>
+        <point>20,-5700</point>
+        <point>30,-5200</point>
+        <point>40,-4700</point>
+        <point>50,-4200</point>
+        <point>60,-3700</point>
+        <point>70,-3300</point>
+        <point>80,-2900</point>
+        <point>90,-2500</point>
+        <point>100,-2100</point>
+        <point>110,-1700</point>
+        <point>120,-1300</point>
         <point>130,-1000</point>
         <point>140,-700</point>
-        <point>150,-350</point>
-        <point>160,-20</point>
+        <point>150,-400</point>
+        <point>160,-150</point>
     <!-- #endif /* OPLUS_BUG_STABILITY */ -->
     </reference>
     <!-- #ifdef OPLUS_BUG_STABILITY
@@ -76,22 +76,22 @@
     <reference name="DEFAULT_MEDIA_VOLUME_CURVE_USB_HEADSET">
     <!-- USB_HEADSET Media reference Volume Curve -->
         <point>1,-7000</point>
-        <point>10,-6250</point>
-        <point>20,-5650</point>
-        <point>30,-5150</point>
-        <point>40,-4650</point>
-        <point>50,-4100</point>
-        <point>60,-3500</point>
-        <point>70,-3150</point>
-        <point>80,-2850</point>
-        <point>90,-2550</point>
-        <point>100,-2250</point>
-        <point>110,-1950</point>
-        <point>120,-1650</point>
+        <point>10,-6200</point>
+        <point>20,-5700</point>
+        <point>30,-5200</point>
+        <point>40,-4700</point>
+        <point>50,-4200</point>
+        <point>60,-3800</point>
+        <point>70,-3400</point>
+        <point>80,-3000</point>
+        <point>90,-2600</point>
+        <point>100,-2200</point>
+        <point>110,-1900</point>
+        <point>120,-1600</point>
         <point>130,-1300</point>
-        <point>140,-950</point>
-        <point>150,-600</point>
-        <point>160,-250</point>
+        <point>140,-1000</point>
+        <point>150,-700</point>
+        <point>160,-300</point>
     </reference>
     <!-- #endif /* OPLUS_BUG_STABILITY */ -->
     <reference name="DEFAULT_MEDIA_VOLUME_CURVE_A2DP">
@@ -117,10 +117,10 @@
         <point>100,-2300</point>
         <point>110,-2000</point>
         <point>120,-1600</point>
-        <point>130,-1200</point>
-        <point>140,-900</point>
-        <point>150,-600</point>
-        <point>160,-380</point>
+        <point>130,-1300</point>
+        <point>140,-1000</point>
+        <point>150,-700</point>
+        <point>160,-350</point>
     <!-- #endif /* OPLUS_BUG_STABILITY */ -->
     </reference>
     <reference name="DEFAULT_DEVICE_CATEGORY_HEADSET_VOLUME_CURVE">
@@ -142,15 +142,15 @@
     #else /* OPLUS_BUG_STABILITY */ -->
         <point>1,-6000</point>
         <point>10,-5500</point>
-        <point>20,-4500</point>
+        <point>20,-4650</point>
         <point>30,-3950</point>
         <point>40,-3400</point>
-        <point>50,-3000</point>
-        <point>60,-2600</point>
-        <point>70,-2300</point>
-        <point>80,-2050</point>
-        <point>90,-1880</point>
-        <point>100,-1680</point>
+        <point>50,-2850</point>
+        <point>60,-2550</point>
+        <point>70,-2250</point>
+        <point>80,-2000</point>
+        <point>90,-1800</point>
+        <point>100,-1650</point>
         <point>110,-1290</point>
         <point>120,-970</point>
         <point>130,-750</point>
@@ -195,9 +195,9 @@
     <reference name="DEFAULT_NON_MUTABLE_HEADSET_VOLUME_CURVE">
     <!--Default non-mutable Volume Curve for headset -->
     <!--    based on DEFAULT_DEVICE_CATEGORY_HEADSET_VOLUME_CURVE -->
-        <point>0,-4950</point>
-        <point>33,-3350</point>
-        <point>66,-1700</point>
+        <point>1,-12700</point>
+        <point>20,-8000</point>
+        <point>60,-4000</point>
         <point>100,0</point>
     </reference>
     <reference name="DEFAULT_NON_MUTABLE_SPEAKER_VOLUME_CURVE">
