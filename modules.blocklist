@@ -1,3 +1,5 @@
+# SPDX-License-Identifier: GPL-2.0-only
+# Copyright (c) 2022-2023 Qualcomm Innovation Center, Inc. All rights reserved.
 blocklist 8250_of
 blocklist adc-tm
 blocklist atomic64_test
@@ -13,8 +15,11 @@ blocklist fc0011
 blocklist fc0012
 blocklist fc0013
 blocklist fc2580
+blocklist ipclite_test
 blocklist it913x
 blocklist kheaders
+blocklist limits_stat
+blocklist limits_stress
 blocklist lkdtm
 blocklist llcc_perfmon
 blocklist locktorture
@@ -30,6 +35,7 @@ blocklist mt2131
 blocklist mt2266
 blocklist mxl301rf
 blocklist net_failover
+blocklist qca_cld3_kiwi
 blocklist qm1d1b0004
 blocklist qm1d1c0042
 blocklist qt1010
@@ -58,7 +64,3 @@ blocklist vsock
 blocklist vsock_diag
 blocklist xc4000
 blocklist xc5000
-blocklist limits_stat
-blocklist kunit
-blocklist qca_cld3_kiwi
-blocklist qca_cld3_qca6490
