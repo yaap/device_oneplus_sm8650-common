@@ -140,9 +140,11 @@ TARGET_KERNEL_EXT_MODULES := \
 	qcom/opensource/mm-drivers/hw_fence \
 	qcom/opensource/mm-drivers/msm_ext_display \
 	qcom/opensource/mm-drivers/sync_fence \
+	qcom/opensource/securemsm-kernel \
 	qcom/opensource/audio-kernel \
 	qcom/opensource/camera-kernel \
 	qcom/opensource/dataipa/drivers/platform/msm \
+	qcom/opensource/datarmnet-ext/mem \
 	qcom/opensource/datarmnet/core \
 	qcom/opensource/datarmnet-ext/aps \
 	qcom/opensource/datarmnet-ext/offload \
@@ -151,15 +153,22 @@ TARGET_KERNEL_EXT_MODULES := \
 	qcom/opensource/datarmnet-ext/perf_tether \
 	qcom/opensource/datarmnet-ext/sch \
 	qcom/opensource/datarmnet-ext/wlan \
-	qcom/opensource/securemsm-kernel \
 	qcom/opensource/display-drivers/msm \
+	qcom/opensource/synx-kernel \
+	qcom/opensource/dsp-kernel \
 	qcom/opensource/eva-kernel \
 	qcom/opensource/video-driver \
 	qcom/opensource/graphics-kernel \
 	qcom/opensource/wlan/platform \
-	qcom/opensource/wlan/qcacld-3.0/.kiwi_v2 \
+	qcom/opensource/wlan/qcacld-3.0 \
 	qcom/opensource/bt-kernel \
-	nxp/opensource/driver
+	qcom/opensource/spu-kernel \
+	qcom/opensource/mm-sys-kernel/ubwcp \
+	qcom/opensource/fingerprint \
+	qcom/opensource/touch-drivers \
+	nxp/opensource/driver \
+	st/opensource/driver \
+	st/opensource/eSE-driver
 
 # Lineage Health
 TARGET_HEALTH_CHARGING_CONTROL_CHARGING_PATH := /sys/class/oplus_chg/battery/mmi_charging_enable
