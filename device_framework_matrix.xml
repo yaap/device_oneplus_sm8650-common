@@ -1,12 +1,5 @@
 <compatibility-matrix version="2.0" type="framework">
     <hal format="aidl" optional="true">
-        <name>android.hardware.biometrics.fingerprint</name>
-        <interface>
-            <name>IFingerprint</name>
-            <instance>default</instance>
-        </interface>
-    </hal>
-    <hal format="aidl" optional="true">
         <name>vendor.oplus.hardware.appradioaidl</name>
         <interface>
             <name>IAppRadioStable</name>
