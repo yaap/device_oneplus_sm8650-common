@@ -41,7 +41,7 @@ product                                                 /product               e
 vendor                                                  /vendor                ext4    ro,barrier=1,discard                                 wait,slotselect,avb=vbmeta_vendor,logical,first_stage_mount
 vendor_dlkm                                             /vendor_dlkm           ext4    ro,barrier=1,discard                                 wait,slotselect,avb=vbmeta_vendor,logical,first_stage_mount
 system_dlkm                                             /system_dlkm           ext4    ro,barrier=1,discard                                 wait,slotselect,avb=vbmeta_system,logical,first_stage_mount
-odm                                                     /odm                   ext4    ro,barrier=1,discard                                 wait,slotselect,logical,first_stage_mount
+odm                                                     /odm                   ext4    ro,barrier=1,discard                                 wait,slotselect,avb=vbmeta_vendor,logical,first_stage_mount
 /dev/block/by-name/boot                                 /boot                  emmc    defaults                                             slotselect,avb=vbmeta,first_stage_mount
 /dev/block/by-name/init_boot                            /init_boot             emmc    defaults                                             slotselect,avb=vbmeta,first_stage_mount
 /dev/block/by-name/vendor_boot                          /vendor_boot           emmc    defaults                                             slotselect,avb=vbmeta,first_stage_mount
