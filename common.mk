@@ -418,10 +418,6 @@ PRODUCT_PACKAGES += \
     libvndfwk_detect_jni.qti.vendor \
     libvndfwk_detect_jni.qti_vendor
 
-# QTI service tracker
-PRODUCT_PACKAGES += \
-    vendor.qti.hardware.servicetracker@1.2.vendor
-
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.radio@1.6.vendor \
