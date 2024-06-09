@@ -95,6 +95,9 @@ on property:sys.boot_completed=1
     chmod 0600 /mnt/vendor/persist/data/pfm/licenses/oplus_Widevine_licenses.pfm
     chown system system /mnt/vendor/persist/data/pfm/licenses/oplus_Widevine_licenses.pfm
 
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
+
 service oplus_sensor_fb /odm/bin/oplus_sensor_fb
     user system
     group system
