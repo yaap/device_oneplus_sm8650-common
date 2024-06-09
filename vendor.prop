@@ -165,6 +165,9 @@ persist.vendor.rcs.singlereg.feature=1
 # Sensors
 persist.vendor.sensors.debug.hal=0
 
+# Update engine
+ro.virtual_ab.compression.threads=true
+
 # USB
 sys.usb.mtp.batchcancel=1
 vendor.usb.controller=a600000.dwc3

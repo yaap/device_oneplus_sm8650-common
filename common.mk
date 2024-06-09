@@ -5,7 +5,7 @@
 #
 
 # A/B
-$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/android_t_baseline.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/vabc_features.mk)
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
@@ -23,7 +23,7 @@ PRODUCT_PACKAGES += \
     checkpoint_gc \
     otapreopt_script
 
-PRODUCT_VIRTUAL_AB_COMPRESSION_METHOD := gz
+PRODUCT_VIRTUAL_AB_COMPRESSION_METHOD := lz4
 
 # ANT+
 PRODUCT_PACKAGES += \
