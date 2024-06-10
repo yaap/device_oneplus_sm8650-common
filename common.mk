@@ -393,8 +393,8 @@ PRODUCT_PACKAGES += \
     android.hardware.power-service.lineage-libperfmgr \
     libqti-perfd-client
 
-# QCOM
-TARGET_BOARD_PLATFORM := pineapple
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # PowerShare
 PRODUCT_PACKAGES += \
@@ -403,6 +403,9 @@ PRODUCT_PACKAGES += \
 # Protobuf
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full-3.9.1-vendorcompat
+
+# QCOM
+TARGET_BOARD_PLATFORM := pineapple
 
 # QMI
 PRODUCT_PACKAGES += \
