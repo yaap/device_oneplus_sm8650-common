@@ -80,6 +80,9 @@ function blob_fixup() {
             sed -i "/NXPLOG_\w\+_LOGLEVEL/ s/0x03/0x02/" "${2}"
             sed -i "s/NFC_DEBUG_ENABLED=1/NFC_DEBUG_ENABLED=0/" "${2}"
             ;;
+        vendor/bin/hw/vendor.qti.hardware.display.composer-service)
+            grep -q libshim_ui.so "$2" || "$PATCHELF" --add-needed libshim_ui.so "$2"
+            ;;
     esac
 }
 
