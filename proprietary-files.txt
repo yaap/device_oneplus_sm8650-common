@@ -1581,7 +1581,6 @@ odm/lib64/libtfavib.so
 odm/lib64/libtriplecam_image_optical_zoom.so
 odm/lib64/libtriplecam_optical_zoom_control.so
 odm/lib64/libtriplecam_video_optical_zoom.so
-odm/lib64/libui.so
 odm/lib64/libvega_common.so
 odm/lib64/libvega_face.so
 odm/lib64/libwatermark_photo.so
