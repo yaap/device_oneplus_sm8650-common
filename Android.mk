@@ -38,19 +38,5 @@ $(CNE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
 	@rm -rf $@
 	$(hide) ln -sf /vendor/lib64/$(notdir $@) $@
 
-IMS_LIBS := libimscamera_jni.so libimsmedia_jni.so
-IMS_SYMLINKS := $(addprefix $(TARGET_OUT_SYSTEM_EXT_APPS_PRIVILEGED)/ims/lib/arm64/,$(notdir $(IMS_LIBS)))
-$(IMS_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "IMS lib link: $@"
-	@mkdir -p $(dir $@)
-	@rm -rf $@
-	$(hide) ln -sf /system_ext/lib64/$(notdir $@) $@
-
-WFD_SERVICE_SYMLINKS := $(TARGET_OUT_SYSTEM_EXT_APPS_PRIVILEGED)/WfdService/lib/arm64
-$(WFD_SERVICE_SYMLINKS): $(LOCAL_INSTALLED_MODULE)
-	@echo "WFD service lib link: $@"
-	@mkdir -p $@
-	$(hide) ln -sf /system_ext/lib64/libwfdnative.so $@/libwfdnative.so
-
-ALL_DEFAULT_INSTALLED_MODULES += $(CNE_SYMLINKS) $(IMS_SYMLINKS) $(WFD_SERVICE_SYMLINKS)
+ALL_DEFAULT_INSTALLED_MODULES += $(CNE_SYMLINKS)
 endif
