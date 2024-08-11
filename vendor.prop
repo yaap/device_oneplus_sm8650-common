@@ -6,6 +6,7 @@ audio.deep_buffer.media=true
 audio.offload.video=true
 audio.sys.offload.pstimeout.secs=3
 audio.sys.noisy.broadcast.delay=600
+vendor.audio.offload.playspeed=true
 persist.vendor.audio.spf_restart=true
 ro.af.client_heap_size_kbyte=7168
 ro.audio.flinger_standbytime_ms=2000
@@ -80,7 +81,7 @@ vendor.display.disable_excl_rect_partial_fb=1
 vendor.display.disable_hw_recovery_dump=1
 vendor.display.disable_offline_rotator=1
 vendor.display.disable_scaler=0
-vendor.display.disable_sdr_dimming=1
+vendor.display.disable_sdr_dimming=0
 vendor.display.disable_sdr_histogram=1
 vendor.display.disable_stc_dimming=1
 vendor.display.enable_async_powermode=0
@@ -103,20 +104,22 @@ persist.sys.fuse.passthrough.enable=true
 
 # Gatekeeper
 vendor.gatekeeper.disable_spu=true
+vendor.gatekeeper.is_security_level_spu=0
 
 # Graphics
 debug.sf.disable_client_composition_cache=1
 debug.sf.early.app.duration=13666666
-debug.sf.early.sf.duration=15666666
+debug.sf.early.sf.duration=10500000
 debug.sf.earlyGl.app.duration=13666666
-debug.sf.earlyGl.sf.duration=15666666
+debug.sf.earlyGl.sf.duration=10500000
 debug.sf.enable_advanced_sf_phase_offset=1
 debug.sf.enable_gl_backpressure=1
-debug.sf.enable_hwc_vds=0
 debug.sf.predict_hwc_composition_strategy=0
+debug.sf.treat_170m_as_sRGB=1
 debug.sf.latch_unsignaled=1
+debug.sf.auto_latch_unsignaled=0
 debug.sf.late.app.duration=13666666
-debug.sf.late.sf.duration=15666666
+debug.sf.late.sf.duration=10500000
 debug.sf.use_phase_offsets_as_durations=1
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
@@ -134,14 +137,14 @@ ro.surface_flinger.wcg_composition_dataspace=143261696
 # Incremental FS
 ro.incremental.enable=yes
 
+# Keystore
+ro.hardware.keystore_desede=true
+
 # Media
 debug.c2.use_dmabufheaps=1
 debug.stagefright.c2inputsurface=-1
 debug.stagefright.ccodec=4
 debug.stagefright.omx_default_rank=0
-
-# Netflix
-ro.netflix.bsp_rev=Q8550-36432-1
 
 # Perf
 ro.vendor.extension_library=libqti-perfd-client.so
