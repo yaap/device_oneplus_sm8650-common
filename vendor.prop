@@ -88,8 +88,14 @@ vendor.display.enable_async_powermode=0
 vendor.display.enable_async_vds_creation=1
 vendor.display.enable_dpps_dynamic_fps=1
 vendor.display.enable_early_wakeup=1
+vendor.display.enable_fb_scaling=1
+vendor.display.force_tonemapping=1
 vendor.display.enable_hdr10_gpu_target=1
 vendor.display.enable_optimize_refresh=0
+vendor.display.scaling_source_opt_mode=4
+vendor.display.scaling_dest_opt_mode=4
+vendor.display.smomo_game_support=0
+vendor.display.force_lm_to_fb_config=1
 vendor.display.use_smooth_motion=1
 vendor.display.vds_allow_hwc=1
 
@@ -179,6 +185,7 @@ vendor.usb.rmnet.inst.name=rmnet
 vendor.usb.rndis.func.name=gsi
 vendor.usb.use_ffs_mtp=1
 vendor.usb.use_gadget_hal=0
+persist.vendor.qvr.usb.type=11ax
 
 # WiFi
 wifi.aware.interface=wifi-aware0
