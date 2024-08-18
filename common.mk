@@ -388,6 +388,10 @@ PRODUCT_COPY_FILES += \
 # QCOM
 TARGET_BOARD_PLATFORM := pineapple
 
+# PowerShare
+PRODUCT_PACKAGES += \
+    vendor.lineage.powershare@1.0-service.oplus
+
 # QMI
 PRODUCT_PACKAGES += \
     libjson \
