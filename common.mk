@@ -212,7 +212,8 @@ PRODUCT_COPY_FILES += \
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper-V1-ndk.vendor \
-    android.hardware.gatekeeper@1.0.vendor
+    android.hardware.gatekeeper@1.0.vendor \
+    libgatekeeper.vendor
 
 # GPS
 PRODUCT_COPY_FILES += \
