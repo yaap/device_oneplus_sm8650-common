@@ -103,6 +103,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml
 
+# Blur
+TARGET_ENABLE_BLUR := true
+
 # Boot control
 PRODUCT_PACKAGES += \
     android.hardware.boot-V1-ndk.vendor \
