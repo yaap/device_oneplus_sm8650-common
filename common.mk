@@ -4,6 +4,13 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Inherit from the proprietary files makefile.
+$(call inherit-product, vendor/oneplus/sm8650-common/sm8650-common-vendor.mk)
+
+# QCom components
+TARGET_COMMON_QTI_COMPONENTS += \
+    telephony
+
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/vabc_features.mk)
 
@@ -589,6 +596,3 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_BOOT_JARS += \
     WfdCommon
-
-# Inherit from the proprietary files makefile.
-$(call inherit-product, vendor/oneplus/sm8650-common/sm8650-common-vendor.mk)
