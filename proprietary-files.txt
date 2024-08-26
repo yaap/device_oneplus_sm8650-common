@@ -1898,6 +1898,12 @@ vendor/lib64/libsysmon_cdsp_skel.so
 vendor/etc/charger_fw_fstab.qti
 
 # CNE
+-system_ext/framework/vendor.qti.hardware.data.qmi-V1.0-java.jar
+-system_ext/framework/vendor.qti.hardware.data.qmiaidlservice-V1-java.jar
+system_ext/lib64/libqmi_cci_system.so
+system_ext/lib64/libqmi_encdec_system.so
+system_ext/lib64/vendor.qti.hardware.data.qmi@1.0.so
+system_ext/lib64/vendor.qti.hardware.data.qmiaidlservice-V1-ndk.so
 vendor/app/CACertService/CACertService.apk
 vendor/app/CneApp/CneApp.apk
 vendor/app/IWlanService/IWlanService.apk
@@ -2925,12 +2931,15 @@ vendor/bin/qmipriod
 vendor/bin/qrtr-cfg
 vendor/bin/qrtr-lookup
 vendor/bin/qrtr-ns
+vendor/bin/qlm-service
+vendor/etc/init/init.qlm-service.rc
 vendor/etc/init/qmipriod.debug.rc
 vendor/etc/init/qmipriod.rc
 vendor/etc/seccomp_policy/qti-systemd.policy
 vendor/lib64/libidl.so
 vendor/lib64/libmdmdetect.so
 vendor/lib64/libqcci_legacy.so
+vendor/lib64/libqsh_ble_pb.so
 vendor/lib64/libqmi.so
 vendor/lib64/libqmi_cci.so
 vendor/lib64/libqmi_client_helper.so
@@ -2970,8 +2979,10 @@ vendor/lib64/hw/vendor.qti.hardware.servicetrackeraidl-impl.so
 vendor/lib64/vendor.qti.hardware.servicetrackeraidl-V1-ndk.so
 
 # QVR
+vendor/bin/hw/qvrservice
 vendor/bin/qvrdatalogger
 vendor/bin/qvrservicetest
+vendor/etc/init/qvrd_vndr.rc
 vendor/etc/qvr/cfg/557/0/65536/mtplanai.txt
 vendor/etc/qvr/cfg/557/0/65536/mtplanai_6dof_config.xml
 vendor/etc/qvr/cfg/557/0/65536/mtplanai_qvr_3dof_tracker_config.txt
@@ -3021,12 +3032,18 @@ vendor/bin/ks
 vendor/bin/qms
 vendor/bin/qtigetprop
 vendor/bin/qtisetprop
+vendor/bin/dlsc
+vendor/bin/nicmd
 vendor/etc/O_STX_platform_license.pfm
 vendor/etc/O_TDD-Bypass_platform_license.pfm
 vendor/etc/SDA_platform_license.pfm
 vendor/etc/SNS_platform_license.pfm
+vendor/etc/permissions/vendor.qti.dcf.xml
 vendor/etc/init/qcrilNrd.rc
 vendor/etc/init/qms.rc
+vendor/etc/init/dcfd.rc
+vendor/etc/init/dlsc.rc
+vendor/etc/init/nicmd.rc
 vendor/etc/qcril_database/qcrilNr.db
 vendor/etc/qcril_database/upgrade/config/0006.0_config.sql
 vendor/etc/qcril_database/upgrade/config/0007.0_config.sql
@@ -3454,9 +3471,17 @@ vendor/etc/vintf/manifest/android.hardware.drm-service.xml
 # WiFi
 odm/vendor/etc/wifi/WCNSS_qcom_cfg.ini
 vendor/bin/cnss-daemon
+vendor/bin/init.crda.sh
+vendor/bin/init.qcom.sdio.sh
+vendor/etc/init/init.vendor.wlan.rc
+vendor/etc/init/qvrd_vndr.rc
 vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/vendor_cmd.xml
 vendor/etc/wifi/wpa_supplicant_overlay.conf
+vendor/firmware/dpAP_full.mbn
+vendor/firmware/dpAP_mini.mbn
+vendor/firmware/dpAP_modemssr.mbn
+vendor/firmware/dpMSA.mbn
 vendor/lib64/libcert_parse.wpa_s.so
 
 # WiFi Display
