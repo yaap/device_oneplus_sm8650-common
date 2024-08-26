@@ -362,6 +362,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     OpenEUICC
 
+# OSENSE
+PRODUCT_PACKAGES += \
+    vendor.oplus.hardware.osense.client-service
+
 # Overlays
 $(call inherit-product, hardware/oplus/overlay/generic/generic.mk)
 $(call inherit-product, hardware/oplus/overlay/qssi/qssi.mk)
