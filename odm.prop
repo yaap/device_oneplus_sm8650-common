@@ -7,13 +7,11 @@ ro.vendor.qti.va_odm.support=1
 persist.vendor.bluetooth.modem_nv_support=true
 
 # Display
-persist.vendor.display.pxlw.iris_feature=0x417f0780
 ro.vendor.display.sensortype=2
 vendor.display.enable_rc_support=0
 vendor.display.enable_rounded_corner=0
 vendor.display.disable_noise_layer=1
 vendor.display.force_dv_support=1
-vendor.display.force_tonemapping=1
 
 # Radio
 persist.vendor.radio.force_on_dc=true
