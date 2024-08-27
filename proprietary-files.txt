@@ -3446,6 +3446,21 @@ odm/firmware/ufs/SAMSUNG-KLUGGARHHD-B0G1.bin
 odm/firmware/ufs/SKhynix-HN8T274EJKX130.bin
 odm/firmware/ufs/move_target_ufs_fw_to_oplusreserve1.sh
 
+# Vibrator
+odm/bin/hw/vendor.oplus.hardware.vibrator-service
+odm/etc/aac_richtap.config
+odm/etc/init/vibrator-default.rc
+odm/etc/vintf/manifest/vibrator-default.xml
+odm/lib64/android.hardware.vibrator-V2-ndk.so
+odm/lib64/libaacvibrator.so
+odm/lib64/liboplusvibratoreffect.so
+odm/lib64/libsivibrator.so
+odm/lib64/vendor.aac.hardware.richtap.vibrator-V2-ndk.so
+odm/lib64/vendor.oplus.hardware.oplusvibrator-V1-ndk.so
+odm/lib64/vendor.oplus.hardware.vibrator-V1-ndk.so
+vendor/lib64/hw/vibrator.default.so
+vendor/lib64/libvibratorutils.so
+
 # Video
 vendor/lib64/libstreamparser.so
 vendor/lib64/libstreamprocessor.so
