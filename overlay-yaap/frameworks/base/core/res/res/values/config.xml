@@ -18,8 +18,12 @@
     <string-array name="config_deviceKeyHandlerLibs" translatable="false">
         <item>/system_ext/app/KeyHandler/KeyHandler.apk</item>
     </string-array>
+
     <!-- Names of the key handler classes -->
     <string-array name="config_deviceKeyHandlerClasses" translatable="false">
         <item>org.lineageos.settings.device.KeyHandler</item>
     </string-array>
+
+    <!-- Path to fast charging status file to detect whether an oem fast charger is active -->
+    <string name="config_oem_charger_path">/sys/class/oplus_chg/battery/fast_charge</string>
 </resources>
