@@ -211,4 +211,27 @@
             <instance>default</instance>
         </interface>
     </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.oplus.hardware.camera.aon</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IAONService</name>
+            <instance>oplusaoncameraservice</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.oplus.hardware.camera.aon</name>
+        <interface>
+            <name>IAONServi1ce</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.oplus.hardware.virtual_device.camera.manager</name>
+        <interface>
+            <name>IVirtualCameraManager</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
 </manifest>

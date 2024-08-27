@@ -291,6 +291,7 @@ vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
 # Camera
 odm/bin/hw/vendor.oplus.hardware.cammidasservice-V1-service
+odm/bin/hw/virtualcameraprovider
 odm/bin/occe_create
 odm/etc/camera/AiFace.json
 odm/etc/camera/CameraHWConfiguration.config
@@ -350,6 +351,10 @@ odm/etc/camera/camera_engmode.xml
 odm/etc/camera/capture_bokeh_params.json
 odm/etc/camera/capture_lutportrait_params.json
 odm/etc/camera/capture_neonportrait_params.json
+odm/etc/camera/cfr_bin/CFR_imx581.bin
+odm/etc/camera/cfr_bin/CFR_lyt808.bin
+odm/etc/camera/cfr_bin/CFR_OPlus_EF017_UW_snapshot.bin
+odm/etc/camera/cfr_bin/CFR_ov64b40_tele.bin
 odm/etc/camera/config/camera_unit_config
 odm/etc/camera/config/camera_unit_feature_config.protobuf
 odm/etc/camera/config/imx581
@@ -1370,6 +1375,7 @@ odm/etc/camera/wide_inv_padding_mapxy_33x25.bin
 odm/etc/camera/wide_padding_mapxy_33x25.bin
 odm/etc/init/occe_create.rc
 odm/etc/init/vendor.oplus.hardware.cammidasservice-V1-service.rc
+odm/etc/init/virtualcameraprovider.rc
 odm/etc/vintf/manifest/manifest_oplus_camera_rfi.xml
 odm/etc/vintf/manifest/manifest_oplus_cammidasservice_aidl.xml
 odm/etc/vintf/manifest/manifest_oplus_sendextcamcmd.xml
@@ -1592,11 +1598,20 @@ odm/lib64/vendor.oplus.hardware.camera_rfi-V1-service-impl.so
 odm/lib64/vendor.oplus.hardware.cammidasservice-V1-ndk.so
 odm/lib64/vendor.oplus.hardware.sendextcamcmd-V1-service-impl.so
 odm/lib64/vendor.oplus.hardware.sendextcamcmd-V2-ndk.so
+odm/lib64/vendor.oplus.hardware.virtual_device.camera.hal@3.3.so
+odm/lib64/vendor.oplus.hardware.virtual_device.camera.manager@1.0-impl.so
+odm/lib64/vendor.oplus.hardware.virtual_device.camera.manager@1.0.so
+odm/lib64/vendor.oplus.hardware.virtual_device.camera.provider@2.4-impl.so
+odm/lib64/vendor.oplus.hardware.virtual_device.camera.provider@2.5-impl.so
+odm/lib64/vendor.oplus.hardware.virtual_device.camera.provider@2.6-impl.so
+odm/lib64/vendor.oplus.hardware.virtual_device.camera.provider@2.7-impl.so
 system/lib64/libziparchive.so:odm/lib64/libziparchive.so
 vendor/bin/hw/vendor.qti.camera.provider-service_64
 vendor/etc/init/vendor.qti.camera.provider-service_64.rc
 vendor/etc/vintf/manifest/vendor.qti.camera.postproc-impl.xml
 vendor/etc/vintf/manifest/vendor.qti.camera.provider.xml
+vendor/etc/vintf/manifest/vendor.qti.camera.aon-impl.xml
+vendor/etc/vintf/manifest/vendor.qti.camera.offlinecamera-impl.xml
 vendor/lib64/camera/arcsoft_calibration_uw.bin
 vendor/lib64/camera/arcsoft_calibration_wt.bin
 vendor/lib64/camera/arcsoft_dc_calibration_t.bin

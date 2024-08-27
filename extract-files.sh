@@ -80,7 +80,7 @@ function blob_fixup() {
             sed -i "/NXPLOG_\w\+_LOGLEVEL/ s/0x03/0x02/" "${2}"
             sed -i "s/NFC_DEBUG_ENABLED=1/NFC_DEBUG_ENABLED=0/" "${2}"
             ;;
-        vendor/bin/hw/vendor.qti.hardware.display.composer-service)
+        vendor/bin/hw/vendor.qti.hardware.display.composer-service|odm/lib64/vendor.oplus.hardware.virtual_device.camera.manager@1.0-impl.so)
             grep -q libshim_ui.so "$2" || "$PATCHELF" --add-needed libshim_ui.so "$2"
             ;;
         vendor/etc/media_codecs_pineapple.xml|vendor/etc/media_codecs_pineapple_vendor.xml)

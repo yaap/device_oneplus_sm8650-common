@@ -6,6 +6,13 @@ ro.vendor.qti.va_odm.support=1
 # Bluetooth
 persist.vendor.bluetooth.modem_nv_support=true
 
+# Camera
+ro.hardware.camera=oemlayer
+ro.camerax.extensions.enabled=true
+ro.oplus.camera.facing.front.need.disable.nfc=1
+oplus.software.camera.10bit=1
+ro.camera.notify_nfc=1
+
 # Display
 persist.vendor.display.pxlw.iris_feature=0x417f0780
 ro.vendor.display.sensortype=2

@@ -62,6 +62,13 @@ persist.vendor.qcom.bluetooth.aac_frm_ctl.enabled=true
 persist.vendor.qcom.bluetooth.aptxadaptiver2_1_support=true
 ro.bluetooth.a2dp_offload.supported=true
 
+# Camera
+ro.camera.enableCamera1MaxZsl=1
+ro.vendor.oplus.camera.frontCamSize=32MP
+ro.vendor.oplus.camera.backCamSize=50MP+48MP+64MP
+ro.vendor.oplus.camera.isSupportExplorer=0
+ro.vendor.oplus.camera.isHasselbladCamera=0
+
 # Chipset
 ro.soc.manufacturer=QTI
 
