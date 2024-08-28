@@ -358,6 +358,10 @@ PRODUCT_PACKAGES += \
     libmm-omxcore \
     libstagefrighthw
 
+# OpenEUICC
+PRODUCT_PACKAGES += \
+    OpenEUICC
+
 # Overlays
 $(call inherit-product, hardware/oplus/overlay/generic/generic.mk)
 $(call inherit-product, hardware/oplus/overlay/qssi/qssi.mk)
@@ -474,7 +478,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Telephony
 PRODUCT_PACKAGES += \
-    OplusEuicc \
     extphonelib \
     extphonelib-product \
     extphonelib.xml \
