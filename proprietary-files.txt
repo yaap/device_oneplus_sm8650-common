@@ -2125,6 +2125,13 @@ odm/bin/irisConfig
 odm/etc/init/vendor.pixelworks.hardware.feature-service-lazy.rc
 odm/etc/vintf/manifest/vendor.pixelworks.hardware.display-service.xml
 odm/etc/vintf/manifest/vendor.pixelworks.hardware.feature-service.xml
+odm/firmware/iris7_ccf1.fw
+odm/firmware/iris7_ccf2.fw
+odm/firmware/iris7_ccf3.fw
+odm/firmware/iris7_ccf4.fw
+odm/firmware/iris7.fw
+odm/firmware/pxlw_i7_panel_AA545_P_3_A0005_dsc_cmd.fw
+odm/firmware/pxlw_vtdr6130_fhd_plus_vid.fw
 odm/lib64/libpwirisIoctlWrapper.so
 odm/lib64/libpwirisPCS.so
 odm/lib64/libpwiriscalibrate.so
