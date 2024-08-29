@@ -73,6 +73,9 @@ function blob_fixup() {
         system_ext/lib64/libwfdnative.so)
             sed -i "s/android.hidl.base@1.0.so/libhidlbase.so\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/" "${2}"
             ;;
+        vendor/etc/init/vendor.qti.camera.provider-service_64.rc)
+            sed -i "6i\    setenv JE_MALLOC_ZERO_FILLING 1" "${2}"
+            ;;
         vendor/etc/libnfc-nci.conf)
             sed -i "s/NFC_DEBUG_ENABLED=1/NFC_DEBUG_ENABLED=0/" "${2}"
             ;;
