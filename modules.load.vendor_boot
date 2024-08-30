@@ -9,7 +9,6 @@ oplus_bsp_frame_boost.ko
 oplus_bsp_cpufreq_health.ko
 oplus_bsp_omrg.ko
 cpufreq_bouncing.ko
-cpufreq_uag.ko
 ua_cpu_ioctl.ko
 oplus_bsp_task_overload.ko
 oplus_bsp_mm_osvelte.ko
