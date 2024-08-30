@@ -2334,11 +2334,24 @@ vendor/firmware/evass.mdt
 vendor/lib64/libfastcvdsp_stub.so
 -vendor/lib64/libfastcvopt.so
 
+# Touch
+odm/lib64/vendor.oplus.hardware.touch-V1-ndk.so
+odm/lib64/vendor.oplus.hardware.touch-V2-ndk.so
+odm/bin/hw/vendor-oplus-hardware-touch-V2-service
+odm/etc/init/vendor-oplus-hardware-touch-V2-service.rc
+odm/etc/permissions/vendor-oplus-hardware-touch-V1.xml
+odm/etc/vintf/manifest/manifest_touch_aidl.xml
+odm/firmware/tp/22111/sys_touch_algo_feature_config.xml
+odm/firmware/tp/22111/sys_touch_function_feature_config.xml
+odm/firmware/tp/22825/sys_edge_touch_config.xml
+odm/firmware/tp/22825/sys_touch_algo_feature_config.xml
+odm/firmware/tp/22825/sys_touch_function_feature_config.xml
+odm/firmware/tp/23607/sys_edge_touch_config.xml
+
 # Fingerprint
 odm/lib64/libolc_vnd.so
 odm/lib64/vendor.oplus.hardware.commondcs-V1-ndk.so
 odm/lib64/vendor.oplus.hardware.olc2-V1-ndk.so
-odm/lib64/vendor.oplus.hardware.touch-V1-ndk.so
 
 # Fingerprint firmware
 odm/vendor/firmware/uff_gx.b00

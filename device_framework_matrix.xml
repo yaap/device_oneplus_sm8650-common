@@ -158,13 +158,21 @@
             <instance>default</instance>
         </interface>
     </hal>
-        <hal format="aidl" optional="true">
+    <hal format="aidl" optional="true">
         <name>android.hardware.radio.ims</name>
         <interface>
             <name>IRadioIms</name>
             <instance>slot1</instance>
             <instance>slot2</instance>
             <instance>slot3</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>vendor.oplus.hardware.touch</name>
+        <version>2</version>
+        <interface>
+            <name>IOplusTouch</name>
+            <instance>default</instance>
         </interface>
     </hal>
     <hal format="aidl" optional="true">
