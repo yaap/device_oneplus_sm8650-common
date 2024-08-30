@@ -109,17 +109,16 @@ on early-boot
     verity_update_state
 
 on boot
-    #ifndef OPLUS_ARCH_EXTENDS
-    # dongchuancheng@MULTIMEDIA.AUDIOSERVER.FRAMEWORK, 2023/05/15, extend audio rt cpuset from cpu 1-2 to cpu0-7
-    #write /dev/cpuset/audio-app/cpus 0-1
-    #else /* OPLUS_ARCH_EXTENDS */
-    write /dev/cpuset/audio-app/cpus 0-7
-    #endif /* OPLUS_ARCH_EXTENDS */
-    # Add a cpuset for the camera daemon
-    # We want all cores for camera
-    mkdir /dev/cpuset/camera-daemon
+    # cpuset configuration
+    write /dev/cpuset/audio-app/cpus 0-1
+    write /dev/cpuset/background/cpus 0-1
     write /dev/cpuset/camera-daemon/cpus 0-7
     write /dev/cpuset/camera-daemon/mems 0
+    write /dev/cpuset/display/cpus 2-4
+    write /dev/cpuset/foreground/cpus 0-4
+    write /dev/cpuset/system-background/cpus 0-1
+    write /dev/cpuset/top-app/cpus 0-7
+
     chown cameraserver cameraserver /dev/cpuset/camera-daemon
     chown cameraserver cameraserver /dev/cpuset/camera-daemon/tasks
     chmod 0660 /dev/cpuset/camera-daemon/tasks
