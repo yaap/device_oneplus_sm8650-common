@@ -438,7 +438,7 @@ PRODUCT_PACKAGES += \
     android.frameworks.sensorservice-V1-ndk.vendor \
     android.frameworks.sensorservice@1.0.vendor \
     android.hardware.sensors-V2-ndk.vendor \
-    android.hardware.sensors-service.multihal \
+    android.hardware.sensors-service.oplus-multihal \
     libsensorndkbridge \
     sensors.dynamic_sensor_hal \
     sensors.oplus
