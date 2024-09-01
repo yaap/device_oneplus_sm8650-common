@@ -193,7 +193,6 @@ oplus_bsp_dfr_shutdown_speed.ko
 oplus_bsp_dfr_theia.ko
 oplus_bsp_dfr_ubt.ko
 oplus_bsp_game_opt.ko
-oplus_bsp_hybridswap_zram.ko
 oplus_bsp_ist_down.ko
 oplus_bsp_ist_up.ko
 oplus_bsp_memleak_detect_simple.ko
@@ -210,8 +209,6 @@ oplus_bsp_tp_syna_common.ko
 oplus_bsp_tp_tcm_S3910.ko
 oplus_bsp_tri_key.ko
 oplus_bsp_uff_fp_driver.ko
-oplus_bsp_zram_opt.ko
-oplus_bsp_zsmalloc.ko
 oplus_connectivity_routerboost.ko
 oplus_connectivity_sla.ko
 oplus_ipa_thermal.ko
