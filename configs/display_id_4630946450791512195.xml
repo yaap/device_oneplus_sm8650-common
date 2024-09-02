@@ -55,7 +55,7 @@ SPDX-License-Identifier: BSD-3-Clause-Clear
     <transitionPoint>0.85</transitionPoint>
     <minimumHdrPercentOfScreen>0.1</minimumHdrPercentOfScreen>
 
-    <minimumLux>10000</minimumLux>
+    <minimumLux>6000</minimumLux>
     <timing>
       <timeWindowSecs>1800</timeWindowSecs>  // Window in which we restrict HBM.
       <timeMaxSecs>300</timeMaxSecs>         // Maximum time of HBM allowed in that window.
