@@ -3082,6 +3082,7 @@ vendor/etc/qcril_database/upgrade/other/0014_version_update_modules.sql
 vendor/etc/qcril_database/upgrade/other/0015_version_add_iccid_clir_pref_table.sql
 vendor/etc/seccomp_policy/qcrilnr@2.0.policy
 vendor/etc/seccomp_policy/qms.policy
+vendor/etc/seccomp_policy/qsap_dcfd.policy
 vendor/etc/telephony_packages.xml
 vendor/etc/vintf/manifest/android.hardware.radio.config.xml
 vendor/etc/vintf/manifest/atfwd-saidl.xml
@@ -3109,6 +3110,7 @@ vendor/lib64/libqcrildataqos.so
 vendor/lib64/libqdpr.so
 vendor/lib64/libqms.so
 vendor/lib64/libqms_client.so
+vendor/lib64/libqsh_ble_pb.so
 vendor/lib64/libril-db.so
 vendor/lib64/libril-legacy.so
 vendor/lib64/libril-qc-ltedirectdisc.so
@@ -3283,6 +3285,7 @@ vendor/etc/init/vendor.sensors.qti.rc
 vendor/etc/init/vendor.sensors.sscrpcd.rc
 vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.sensorscalibrate.xml
+vendor/lib64/libSensorsInterface.so
 vendor/lib64/libcwb_client_vendor.so
 vendor/lib64/libqsh.so
 vendor/lib64/libsensorcal.so
