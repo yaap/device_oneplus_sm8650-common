@@ -360,10 +360,6 @@ PRODUCT_PACKAGES += \
     libmm-omxcore \
     libstagefrighthw
 
-# OpenEUICC
-PRODUCT_PACKAGES += \
-    OpenEUICC
-
 # OSENSE
 PRODUCT_PACKAGES += \
     vendor.oplus.hardware.osense.client-service
@@ -484,6 +480,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
 # Telephony
 PRODUCT_PACKAGES += \
+    OplusEuicc \
     extphonelib \
     extphonelib-product \
     extphonelib.xml \
