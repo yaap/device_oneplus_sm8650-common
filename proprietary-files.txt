@@ -198,10 +198,12 @@ odm/vendor/firmware/antdtx.mdt
 odm/lib64/lib_lvacfs.so
 odm/lib64/liblvacfs_wrapper.so
 odm/lib64/libtfa98xx.so
+vendor/bin/qsap_voiceui
 vendor/etc/models/acd/environment.eai
 vendor/etc/models/acd/event.eai
 vendor/etc/models/acd/music.eai
 vendor/etc/models/acd/speech.eai
+vendor/etc/seccomp_policy/qsap_voiceui.policy
 vendor/lib64/hw/audio.primary.pineapple.so
 vendor/lib64/libAlacSwDec.so
 vendor/lib64/libApeSwDec.so
@@ -1903,6 +1905,7 @@ vendor/firmware/tof8801_firmware.bin
 # CDSP
 vendor/bin/cdsprpcd
 vendor/etc/init/vendor.qti.cdsprpc-service.rc
+vendor/lib64/libQ6MSFR_manager_stub.so
 vendor/lib64/libcdsp_default_listener.so
 vendor/lib64/libcdsprpc.so
 vendor/lib64/libmdsprpc.so
@@ -2418,6 +2421,7 @@ vendor/bin/hw/android.hardware.gnss-aidl-service-qti
 vendor/bin/loc_launcher
 vendor/bin/lowi-server
 vendor/bin/mlid
+vendor/bin/qsap_location
 vendor/bin/slim_daemon
 vendor/bin/xtra-daemon
 vendor/bin/xtwifi-client
@@ -2427,12 +2431,14 @@ vendor/etc/gnss_antenna_info.conf
 vendor/etc/gps.conf
 vendor/etc/init/android.hardware.gnss-aidl-service-qti.rc
 vendor/etc/init/loc-launcher.rc
+vendor/etc/init/vendor.qsap.location.rc
 vendor/etc/izat.conf
 vendor/etc/lowi.conf
 vendor/etc/sap.conf
 vendor/etc/sec_config
 vendor/etc/seccomp_policy/gnss@2.0-base.policy
 vendor/etc/seccomp_policy/gnss@2.0-edgnss-daemon.policy
+vendor/etc/seccomp_policy/gnss@2.0-qsap-location.policy
 vendor/etc/seccomp_policy/gnss@2.0-xtra-daemon.policy
 vendor/etc/seccomp_policy/gnss@2.0-xtwifi-client.policy
 vendor/etc/vintf/manifest/android.hardware.gnss-aidl-service-qti.xml
@@ -2683,6 +2689,8 @@ vendor/lib64/libqcodec2_streaminteg_filter.so
 vendor/lib64/libqcodec2_utils.so
 vendor/lib64/libqcodec2_v4l2codec.so
 vendor/lib64/libqconfigclient.so
+vendor/lib64/libqtbase.so
+vendor/lib64/libqtnodes.so
 vendor/lib64/qti.video.utils.videobufferlayout.so
 vendor/lib64/vendor.qti.hardware.qconfig-V1-ndk.so
 
@@ -2779,7 +2787,9 @@ odm/lib64/vendor.oplus.hardware.urcc-V1-ndk.so
 vendor/bin/hw/vendor.qti.hardware.iop@2.0-service
 vendor/bin/hw/vendor.qti.hardware.perf2-hal-service
 vendor/bin/poweropt-service
+vendor/bin/qsap_qapeservice
 vendor/etc/init/poweropt-service.rc
+vendor/etc/init/vendor.qsap.qapeservice.rc
 vendor/etc/init/vendor.qti.hardware.iop@2.0-service.rc
 vendor/etc/init/vendor.qti.hardware.perf2-hal-service.rc
 vendor/etc/lm/AdaptLaunchFeature.xml
@@ -2814,6 +2824,7 @@ vendor/etc/pwr/PSMPowerOptFeature.xml
 vendor/etc/pwr/PowerFeatureConfig.xml
 vendor/etc/pwr/StandbyFeature.xml
 vendor/etc/pwr/VideoPowerOptFeature.xml
+vendor/etc/seccomp_policy/qsap_qapeservice.policy
 vendor/etc/vintf/manifest/vendor.qti.hardware.perf2.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.power.powermodule.xml
 vendor/lib64/libadaptlaunch.so
@@ -2936,6 +2947,7 @@ vendor/lib64/vendor.qti.qesdsys-V4-ndk.so
 system/etc/sysconfig/qti_whitelist.xml
 vendor/bin/init.qti.write.sh
 vendor/bin/irsc_util
+vendor/bin/qlm-service
 vendor/bin/qmipriod
 vendor/bin/qrtr-cfg
 vendor/bin/qrtr-lookup
@@ -3224,6 +3236,9 @@ vendor/bin/rmt_storage
 vendor/etc/init/vendor.qti.rmt_storage.rc
 
 # SCVE
+vendor/lib64/libFace3DTA.so
+vendor/lib64/libFace3D_hlos.so
+vendor/lib64/libface3d_dev.so
 vendor/lib64/libscveCommon.so
 vendor/lib64/libscveCommon_stub.so
 vendor/lib64/libscveObjectSegmentation.so
@@ -3234,6 +3249,7 @@ vendor/lib64/libscveObjectTracker_stub.so
 vendor/etc/ssg/ta_config.json
 vendor/lib64/libminkdescriptor.so
 vendor/lib64/libminksocket_vendor.so
+vendor/lib64/libnative-api.so
 vendor/lib64/libqcbor.so
 
 # Secure element
@@ -3277,13 +3293,16 @@ odm/bin/oplus_sensor_fb
 odm/lib64/liboplus_service.so
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate-service
 vendor/bin/init.qcom.sensors.sh
+vendor/bin/qsap_sensors
 vendor/bin/sensors.qti
 vendor/bin/sscrpcd
 vendor/etc/init/init.vendor.sensors.rc
+vendor/etc/init/vendor.qsap.sensors.rc
 vendor/etc/init/vendor.qti.hardware.sensorscalibrate-service.rc
 vendor/etc/init/vendor.sensors.qti.rc
 vendor/etc/init/vendor.sensors.sscrpcd.rc
 vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
+vendor/etc/seccomp_policy/qsap_sensors.policy
 vendor/etc/vintf/manifest/vendor.qti.hardware.sensorscalibrate.xml
 vendor/lib64/libSensorsInterface.so
 vendor/lib64/libcwb_client_vendor.so
