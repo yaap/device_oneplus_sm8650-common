@@ -77,10 +77,6 @@ on init
     chown system system /dev/cpuctl/general/tasks
     chmod 0644 /dev/cpuctl/general/tasks
 
-    # ZRAM setup
-    write /sys/block/zram0/comp_algorithm lz4
-    write /proc/sys/vm/page-cluster 0
-
 on early-init && property:ro.baseband=apq
     setprop ro.radio.noril yes
 
@@ -218,5 +214,9 @@ service fan_control_turn_off /vendor/bin/fan_service 0
 
 on property:sys.boot_completed=1
     # Enable ZRAM on boot_complete
+    insmod /system/lib/modules/6.1.57-android14-11-o-g22ef1e8b7975/kernel/mm/zsmalloc.ko
+    insmod /system/lib/modules/6.1.57-android14-11-o-g22ef1e8b7975/kernel/drivers/block/zram/zram.ko
+    write /sys/block/zram0/comp_algorithm lz4
+    write /proc/sys/vm/page-cluster 0
     swapon_all /vendor/etc/fstab.${ro.boot.hardware}
     write /proc/sys/vm/swappiness 60
