@@ -1581,7 +1581,6 @@ odm/lib64/libsharebuffer_impl.so
 odm/lib64/libsnpe_loader.so
 odm/lib64/libstblur_api.so
 odm/lib64/libstblur_capture_api.so
-odm/lib64/libstdc++.so
 odm/lib64/libstface_datas.so
 odm/lib64/libstface_fd_api.so
 odm/lib64/libstfd_mobile_api.so
