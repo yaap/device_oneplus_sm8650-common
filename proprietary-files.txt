@@ -2758,8 +2758,6 @@ vendor/lib64/nfc_nci.st21nfc.st.so
 
 # OSENSE
 odm/lib64/libosenseaidlhalclient.so
-odm/lib64/vendor.oplus.hardware.osense.client-V1-ndk.so
-vendor/lib64/vendor.oplus.hardware.osense.client-V1-ndk.so
 
 # OPLUS Performance
 odm/bin/hw/vendor-oplus-hardware-performance-V1-service
