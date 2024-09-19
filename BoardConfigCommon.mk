@@ -125,8 +125,8 @@ TARGET_KERNEL_SOURCE := kernel/oneplus/sm8650
 TARGET_KERNEL_CONFIG := \
     gki_defconfig \
     vendor/pineapple_GKI.config \
-    vendor/oplus/pineapple_GKI.config \
-    vendor/debugfs.config
+    vendor/oplus/pineapple_GKI.config
+#    vendor/debugfs.config
 
 # Kernel modules
 BOARD_SYSTEM_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMON_PATH)/modules.load.system_dlkm))
