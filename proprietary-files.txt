@@ -2349,8 +2349,6 @@ odm/lib64/libolc_vnd.so|18892acbbeb000dc45193bc4fbb22a440741a3b3
 odm/lib64/vendor.oplus.hardware.commondcs-V1-ndk.so|2b668c886d18c93f4647de75ac431da45e421465
 odm/lib64/vendor.oplus.hardware.olc2-V1-ndk.so|79a4b0146a47817d277453c5065260917bd8a297
 odm/lib64/vendor.oplus.hardware.olc2-V2-ndk.so|1477bcdf8bd14b9174bab2166cc87400289b4597
-odm/lib64/vendor.oplus.hardware.touch-V1-ndk.so|8d710837a8f0a688ae633808ae8131d23fa7a083
-odm/lib64/vendor.oplus.hardware.touch-V2-ndk.so|fab1c38b6d450770e7390ad5658d39e983d4dcab
 -odm/etc/vintf/manifest/manifest_oplus_fingerprint_aidl_v3.xml|6f3a59582a3dd5a4ad44d59da95e18b01e84f98b
 
 # Fingerprint firmware
@@ -3331,6 +3329,22 @@ vendor/app/TimeService/TimeService.apk;NODEXPO
 vendor/bin/time_daemon
 vendor/etc/init/init.time_daemon.rc
 vendor/lib64/libtime_genoff.so
+
+# Touch
+odm/bin/touchDaemon
+odm/bin/touchHidlTest
+odm/bin/hw/vendor-oplus-hardware-touch-V2-service
+odm/etc/init/init.touchDaemon.rc
+odm/etc/init/vendor-oplus-hardware-touch-V2-service.rc
+odm/etc/vintf/manifest/manifest_touch_aidl.xml
+odm/lib64/vendor.oplus.hardware.touch-V1-ndk.so
+odm/lib64/vendor.oplus.hardware.touch-V2-ndk.so
+odm/bin/hw/vendor.oplus.hardware.urcc-service
+odm/etc/init/vendor.oplus.hardware.urcc-service.rc
+odm/etc/vintf/manifest/vendor.oplus.hardware.urcc-service.xml
+odm/lib64/liboplus-uah-client.so
+odm/lib64/liburcccore.so
+odm/lib64/vendor.oplus.hardware.urcc-V1-ndk.so
 
 # Trusted Execution Environment connector
 vendor/lib64/libGPMTEEC_vendor.so
