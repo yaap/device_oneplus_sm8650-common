@@ -205,6 +205,8 @@ oplus_bsp_synaptics_tcm2.ko
 oplus_bsp_task_load.ko
 oplus_bsp_tp_common.ko
 oplus_bsp_tp_custom.ko
+oplus_bsp_tp_focal_common.ko
+oplus_bsp_tp_ft3658u_spi.ko
 oplus_bsp_tp_syna_common.ko
 oplus_bsp_tp_tcm_S3910.ko
 oplus_bsp_tri_key.ko
