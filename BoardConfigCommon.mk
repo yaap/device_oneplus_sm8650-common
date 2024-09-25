@@ -147,8 +147,8 @@ TARGET_KERNEL_EXT_MODULES := \
 	qcom/opensource/securemsm-kernel \
 	qcom/opensource/audio-kernel \
 	qcom/opensource/camera-kernel \
-	qcom/opensource/dataipa/drivers/platform/msm \
 	qcom/opensource/datarmnet-ext/mem \
+	qcom/opensource/dataipa/drivers/platform/msm \
 	qcom/opensource/datarmnet/core \
 	qcom/opensource/datarmnet-ext/aps \
 	qcom/opensource/datarmnet-ext/offload \
