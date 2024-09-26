@@ -1,17 +1,7 @@
 gh_arm_drv.ko
 sched-walt.ko
 qcom_ipc_logging.ko
-oplus_bsp_sched_assist.ko
-oplus_bsp_task_cpustats.ko
-oplus_bsp_task_sched.ko
-oplus_bsp_schedinfo.ko
-oplus_bsp_frame_boost.ko
-oplus_bsp_cpufreq_health.ko
 oplus_bsp_omrg.ko
-cpufreq_bouncing.ko
-ua_cpu_ioctl.ko
-oplus_bsp_task_overload.ko
-oplus_bsp_mm_osvelte.ko
 qcom-pdc.ko
 phy-qcom-ufs.ko
 phy-qcom-ufs-qmp-v4-pineapple.ko

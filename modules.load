@@ -3,9 +3,7 @@ msm_show_resume_irq.ko
 mhi.ko
 mhi_dev_uci.ko
 mhi_dev_satellite.ko
-phy-qcom-ufs-qmp-v4-kalama.ko
 phy-qcom-ufs-qmp-v4.ko
-phy-qcom-ufs-qmp-v4-waipio.ko
 pinctrl-spmi-gpio.ko
 pinctrl-spmi-mpp.ko
 pwm-qti-lpg.ko
@@ -173,11 +171,9 @@ mac80211.ko
 qrtr-smd.ko
 qrtr-mhi.ko
 horae_shell_temp.ko
-oplus_binder_strategy.ko
 oplus_bsp_dfr_combkey_monitor.ko
 oplus_bsp_dfr_dump_device_info.ko
 oplus_bsp_dfr_dump_reason.ko
-oplus_bsp_dfr_fdleak_check.ko
 oplus_bsp_dfr_force_shutdown.ko
 oplus_bsp_dfr_hung_task_enhance.ko
 oplus_bsp_dfr_init_watchdog.ko
@@ -192,17 +188,12 @@ oplus_bsp_dfr_shutdown_detect.ko
 oplus_bsp_dfr_shutdown_speed.ko
 oplus_bsp_dfr_theia.ko
 oplus_bsp_dfr_ubt.ko
-oplus_bsp_game_opt.ko
 oplus_bsp_ist_down.ko
 oplus_bsp_ist_up.ko
-oplus_bsp_memleak_detect_simple.ko
 oplus_bsp_midas.ko
 oplus_bsp_mxm_down.ko
 oplus_bsp_mxm_up.ko
-oplus_bsp_proactive_compact.ko
-oplus_bsp_sigkill_diagnosis.ko
 oplus_bsp_synaptics_tcm2.ko
-oplus_bsp_task_load.ko
 oplus_bsp_tp_common.ko
 oplus_bsp_tp_custom.ko
 oplus_bsp_tp_focal_common.ko
@@ -214,7 +205,6 @@ oplus_bsp_uff_fp_driver.ko
 oplus_connectivity_routerboost.ko
 oplus_connectivity_sla.ko
 oplus_ipa_thermal.ko
-oplus_locking_strategy.ko
 oplus_network_app_monitor.ko
 oplus_network_data_module.ko
 oplus_network_dns_hook.ko
@@ -230,7 +220,6 @@ oplus_network_stats_calc.ko
 oplus_network_tuning.ko
 oplus_network_vnet.ko
 oplus_secure_common.ko
-oplus_secure_guard.ko
 oplus_sensor_deviceinfo.ko
 oplus_sensor_feedback.ko
 oplus_sensor_interact.ko
