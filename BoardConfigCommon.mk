@@ -134,8 +134,6 @@ BOARD_VENDOR_RAMDISK_RECOVERY_KERNEL_MODULES_LOAD := $(strip $(shell cat $(COMMO
 BOOT_KERNEL_MODULES := $(strip $(shell cat $(COMMON_PATH)/modules.load.recovery $(COMMON_PATH)/modules.include.vendor_ramdisk))
 SYSTEM_KERNEL_MODULES := $(strip $(shell cat $(COMMON_PATH)/modules.include.system_dlkm))
 
-KERNEL_LTO := full
-
 TARGET_KERNEL_EXT_MODULE_ROOT := kernel/oneplus/sm8650-modules
 TARGET_KERNEL_EXT_MODULES := \
 	qcom/opensource/mmrm-driver \
