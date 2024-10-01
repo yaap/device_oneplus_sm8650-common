@@ -98,6 +98,8 @@ function blob_fixup() {
             sed -Ei "/media_codecs_(google_audio|google_c2|google_telephony|google_video|vendor_audio)/d" "${2}"
             sed -i "/vp9.decoder/,/<\/MediaCodec>/d" "${2}"
             sed -i "/av1.decoder/,/<\/MediaCodec>/d" "${2}"
+        vendor/lib64/libqcodec2_core.so)
+            grep -q "libcodec2_shim.so" "${2}" || "${PATCHELF}" --add-needed "libcodec2_shim.so" "${2}"
             ;;
     esac
 }
