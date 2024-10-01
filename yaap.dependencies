@@ -8,10 +8,6 @@
     "target_path": "kernel/oneplus/sm8650"
   },
   {
-    "repository": "kernel_oneplus_sm8650-devicetrees",
-    "target_path": "kernel/oneplus/sm8650-devicetrees"
-  },
-  {
     "repository": "kernel_oneplus_sm8650-modules",
     "target_path": "kernel/oneplus/sm8650-modules"
   }
