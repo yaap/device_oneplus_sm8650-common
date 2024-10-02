@@ -94,6 +94,9 @@ function blob_fixup() {
         vendor/bin/hw/vendor.qti.hardware.display.composer-service|odm/lib64/vendor.oplus.hardware.virtual_device.camera.manager@1.0-impl.so)
             grep -q libshim_ui.so "$2" || "$PATCHELF" --add-needed libshim_ui.so "$2"
             ;;
+        vendor/lib64/vendor.libdpmframework.so)
+            grep -q libhidlbase_shim.so "$2" || "$PATCHELF" --add-needed libhidlbase_shim.so "$2"
+            ;;
         vendor/etc/media_codecs_pineapple.xml|vendor/etc/media_codecs_pineapple_vendor.xml)
             sed -Ei "/media_codecs_(google_audio|google_c2|google_telephony|google_video|vendor_audio)/d" "${2}"
             sed -i "/vp9.decoder/,/<\/MediaCodec>/d" "${2}"
