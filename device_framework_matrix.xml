@@ -191,4 +191,11 @@
             <instance>default</instance>
         </interface>
     </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.biometrics.fingerprint</name>
+        <interface>
+            <name>IFingerprint</name>
+            <instance>oplus</instance>
+        </interface>
+    </hal>
 </compatibility-matrix>
