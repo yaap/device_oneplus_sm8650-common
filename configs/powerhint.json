@@ -374,115 +374,115 @@
     {
       "PowerHint": "INTERACTION",
       "Node": "CPUBigPlusClusterMinFreq",
-      "Duration": 3000,
+      "Duration": 200,
       "Value": "1286400"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "CPUBigClusterMinFreq",
-      "Duration": 3000,
+      "Duration": 200,
       "Value": "1401600"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "CPULittleClusterMinFreq",
-      "Duration": 3000,
+      "Duration": 200,
       "Value": "1344000"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "UclampTAMin",
-      "Duration": 3000,
+      "Duration": 9000,
       "Value": "50"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "UclampTALatency",
-      "Duration": 3000,
+      "Duration":9000,
       "Value": "1"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "SchedBusyHystNs",
-      "Duration": 3000,
+      "Duration": 200,
       "Value": "99000000"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "SchedBusyHystEnableCPUs",
-      "Duration": 3000,
+      "Duration": 200,
       "Value": "255"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "SchedMinTaskUtilForBoost",
-      "Duration": 3000,
+      "Duration": 200,
       "Value": "0"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "SchedMinTaskUtilForColoc",
-      "Duration": 3000,
+      "Duration": 200,
       "Value": "0"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "SchedMinTaskUtilForUclamp",
-      "Duration": 3000,
+      "Duration": 200,
       "Value": "0"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "CPUBWHystTriggerCount",
-      "Duration": 3000,
+      "Duration": 200,
       "Value": "0"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "CPUBWHystLength",
-      "Duration": 3000,
+      "Duration": 200,
       "Value": "0"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "CPUBWHistMemory",
-      "Duration": 3000,
+      "Duration": 200,
       "Value": "0"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "CPUBWMinFreq",
-      "Duration": 3000,
+      "Duration": 200,
       "Value": "1555000"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "LLCCBWHystTriggerCount",
-      "Duration": 3000,
+      "Duration": 200,
       "Value": "0"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "LLCCBWHystLength",
-      "Duration": 3000,
+      "Duration": 200,
       "Value": "0"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "LLCCBWHistMemory",
-      "Duration": 3000,
+      "Duration": 200,
       "Value": "0"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "LLCCBWMinFreq",
-      "Duration": 3000,
+      "Duration": 200,
       "Value": "600000"
     },
     {
       "PowerHint": "INTERACTION",
       "Node": "L3MinFreq",
-      "Duration": 3000,
+      "Duration": 200,
       "Value": "1132800"
     },
     {
