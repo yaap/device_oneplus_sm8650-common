@@ -2158,6 +2158,8 @@ odm/lib64/vendor.pixelworks.hardware.display@1.2.so
 odm/lib64/vendor.pixelworks.hardware.feature-V1-ndk.so
 odm/lib64/vendor.pixelworks.hardware.feature@1.0.so
 odm/lib64/vendor.pixelworks.hardware.feature@1.1.so
+vendor/lib64/libhdrdynamic.so
+vendor/lib64/libhdrdynamicootf.so
 vendor/lib64/libpwirisfeature.so
 vendor/lib64/libpwirishal.so
 vendor/lib64/libpwirishalwrapper.so
