@@ -66,6 +66,8 @@ function blob_fixup() {
     case "${1}" in
         odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service_uff)
             sed -i "s/\/default/\/oplus\x00\x00/" "${2}"
+            "${PATCHELF_0_17_2}" --replace-needed "android.hardware.biometrics.common-V1-ndk.so" "android.hardware.biometrics.common-V4-ndk.so" "${2}"
+            "${PATCHELF_0_17_2}" --replace-needed "android.hardware.biometrics.fingerprint-V1-ndk.so" "android.hardware.biometrics.fingerprint-V4-ndk.so" "${2}"
             ;;
         odm/etc/camera/CameraHWConfiguration.config)
             sed -i "/SystemCamera = / s/1;/0;/g" "${2}"
