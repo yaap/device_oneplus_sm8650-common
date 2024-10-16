@@ -64,15 +64,8 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-        odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service_uff)
-            sed -i "s/\/default/\/oplus\x00\x00/" "${2}"
-            ;;
         odm/etc/camera/CameraHWConfiguration.config)
             sed -i "/SystemCamera = / s/1;/0;/g" "${2}"
-            ;;
-        odm/etc/vintf/manifest/manifest_oplus_fingerprint_aidl_v3.xml)
-            sed -i "s/IFingerprint\/default/IFingerprint\/oplus/" "${2}"
-            sed -i "/<version>/d" "${2}"
             ;;
         odm/lib64/libCOppLceTonemapAPI.so|odm/lib64/libCS.so|odm/lib64/libSuperRaw.so|odm/lib64/libYTCommon.so|odm/lib64/libyuv2.so)
             "${PATCHELF_0_17_2}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
