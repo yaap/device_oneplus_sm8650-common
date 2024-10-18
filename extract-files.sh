@@ -67,6 +67,9 @@ function blob_fixup() {
         odm/etc/camera/CameraHWConfiguration.config)
             sed -i "/SystemCamera = / s/1;/0;/g" "${2}"
             ;;
+        odm/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc)
+            sed -i "8i\    task_profiles ProcessCapacityHigh MaxPerformance" "${2}"
+            ;;
         odm/lib64/libCOppLceTonemapAPI.so|odm/lib64/libCS.so|odm/lib64/libSuperRaw.so|odm/lib64/libYTCommon.so|odm/lib64/libyuv2.so)
             "${PATCHELF_0_17_2}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
             ;;
