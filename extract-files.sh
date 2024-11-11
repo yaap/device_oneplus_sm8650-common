@@ -91,6 +91,10 @@ function blob_fixup() {
             sed -i "s/android.hardware.graphics.common-V3-ndk.so/android.hardware.graphics.common-V6-ndk.so/" "${2}"
             sed -i "s/android.hardware.graphics.common-V4-ndk.so/android.hardware.graphics.common-V6-ndk.so/" "${2}"
             ;;
+        odm/lib64/libpwirishalwrapper.so|vendor/lib64/libpwirishalwrapper.so)
+            [ "$2" = "" ] && return 0
+            sed -i "s/android.hardware.graphics.composer3-V2-ndk.so/android.hardware.graphics.composer3-V3-ndk.so/" "${2}"
+            ;;
         odm/lib64/libCOppLceTonemapAPI.so|odm/lib64/libCS.so|odm/lib64/libSuperRaw.so|odm/lib64/libYTCommon.so|odm/lib64/libyuv2.so)
             [ "$2" = "" ] && return 0
             "${PATCHELF_0_17_2}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
@@ -105,9 +109,14 @@ function blob_fixup() {
             grep -q "libbase_shim.so" "${2}" || "${PATCHELF}" --add-needed "libbase_shim.so" "${2}"
             grep -q "libprocessgroup_shim.so" "${2}" || "${PATCHELF}" --add-needed "libprocessgroup_shim.so" "${2}"
             ;;
-        odm/lib64/vendor.oplus.hardware.virtual_device.camera.manager@1.0-impl.so|vendor/lib64/libcwb_qcom_aidl.so)
+        odm/lib64/vendor.oplus.hardware.virtual_device.camera.manager@1.0-impl.so)
             [ "$2" = "" ] && return 0
             grep -q "libui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libui_shim.so" "${2}"
+            ;;
+        vendor/lib64/libcwb_qcom_aidl.so)
+            [ "$2" = "" ] && return 0
+            grep -q "libui_shim.so" "${2}" || "${PATCHELF}" --add-needed "libui_shim.so" "${2}"
+            sed -i "s/android.hardware.graphics.composer3-V2-ndk.so/android.hardware.graphics.composer3-V3-ndk.so/" "${2}"
             ;;
         product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml)
             [ "$2" = "" ] && return 0
