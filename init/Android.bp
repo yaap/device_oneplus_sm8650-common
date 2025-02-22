@@ -58,6 +58,12 @@ sh_binary {
 }
 
 sh_binary {
+    name: "init.kernel.post_boot.sh",
+    src: "init.kernel.post_boot.sh",
+    vendor: true,
+}
+
+sh_binary {
     name: "init.qcom.post_boot.sh",
     src: "init.qcom.post_boot.sh",
     vendor: true,

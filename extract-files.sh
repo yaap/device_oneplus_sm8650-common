@@ -119,8 +119,8 @@ function blob_fixup() {
             ;;
         vendor/bin/system_dlkm_modprobe.sh)
             [ "$2" = "" ] && return 0
-            sed "/zram or zsmalloc/d" "${2}"
-            sed "s/-e \"zram\" -e \"zsmalloc\"//g" "${2}"
+            sed -i "/zram or zsmalloc/d" "${2}"
+            sed -i "s/-e \"zram\" -e \"zsmalloc\"//g" "${2}"
             ;;
         vendor/etc/init/vendor.qti.camera.provider-service_64.rc)
             sed -i "6i\    setenv JE_MALLOC_ZERO_FILLING 1" "${2}"

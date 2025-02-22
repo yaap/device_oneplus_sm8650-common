@@ -277,6 +277,7 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.class_main.sh \
     init.oplus.rc \
+    init.kernel.post_boot.sh \
     init.qcom.early_boot.sh \
     init.qcom.post_boot.sh \
     init.qcom.rc \
@@ -533,6 +534,9 @@ PRODUCT_PACKAGES += \
     qti_telephony_utils.xml \
     qti_telephony_utils_prd.xml \
     telephony-ext
+
+PRODUCT_PACKAGES += \
+    qcrilNrDb_vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \

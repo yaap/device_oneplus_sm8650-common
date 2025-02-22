@@ -1,0 +1,102 @@
+//
+// SPDX-FileCopyrightText: 2025 The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+prebuilt_etc {
+    name: "0015.1_config.sql",
+    src: "0015.1_config.sql",
+    sub_dir: "qcril_database/upgrade/config",
+    vendor: true,
+}
+
+filegroup {
+    name: "rildb_other_sql_files",
+    srcs: [
+        "//vendor/oneplus/sm8650-common:0000_initial_qcrilnr",
+        "//vendor/oneplus/sm8650-common:0001_version_intro_qcrilnr",
+        "//vendor/oneplus/sm8650-common:0002_version_add_wps_config_qcrilnr",
+        "//vendor/oneplus/sm8650-common:0003_version_update_wps_config_qcrilnr",
+        "//vendor/oneplus/sm8650-common:0004_version_update_ecc_table_qcrilnr",
+        "//vendor/oneplus/sm8650-common:0005_version_update_ecc_table_qcrilnr",
+        "//vendor/oneplus/sm8650-common:0006_version_change_property_table_qcrilnr",
+        "//vendor/oneplus/sm8650-common:0007_version_update_ecc_table_qcrilnr",
+        "//vendor/oneplus/sm8650-common:0008_version_update_ecc_table",
+        "//vendor/oneplus/sm8650-common:0009_version_update_ecc_table",
+        "//vendor/oneplus/sm8650-common:0010_version_update_ecc_table",
+        "//vendor/oneplus/sm8650-common:0011_version_update_ecc_table",
+        "//vendor/oneplus/sm8650-common:0012_version_update_ecc_table",
+        "//vendor/oneplus/sm8650-common:0013_version_update_ecc_table",
+        "//vendor/oneplus/sm8650-common:0014_version_update_modules",
+        "//vendor/oneplus/sm8650-common:0015_version_add_iccid_clir_pref_table",
+    ],
+}
+
+filegroup {
+    name: "rildb_config_sql_files",
+    srcs: [
+        "//vendor/oneplus/sm8650-common:0006.0_config",
+        "//vendor/oneplus/sm8650-common:0007.0_config",
+        "//vendor/oneplus/sm8650-common:0008.0_config",
+        "//vendor/oneplus/sm8650-common:0009.0_config",
+        "//vendor/oneplus/sm8650-common:0010.0_config",
+        "//vendor/oneplus/sm8650-common:0011.0_config",
+        "//vendor/oneplus/sm8650-common:0012.0_config",
+        "//vendor/oneplus/sm8650-common:0013.0_config",
+        "//vendor/oneplus/sm8650-common:0014.0_config",
+        "//vendor/oneplus/sm8650-common:0015.0_config",
+        "0015.1_config.sql",
+    ],
+}
+
+genrule {
+    name: "qcril_config_database",
+    enabled: true,
+    srcs: [
+        ":rildb_other_sql_files",
+        ":rildb_config_sql_files",
+    ],
+    tools: [
+        "generate_qcril_db",
+        "sqlite3",
+    ],
+    cmd: "$(location generate_qcril_db) $(location sqlite3) $(out) $(in)",
+    out: ["qcrilNr.db"],
+}
+
+prebuilt_etc {
+    name: "qcrilNrDb_vendor",
+    filename: "qcrilNr.db",
+    src: ":qcril_config_database",
+    sub_dir: "qcril_database",
+    vendor: true,
+    required: [
+        "0000_initial_qcrilnr",
+        "0001_version_intro_qcrilnr",
+        "0002_version_add_wps_config_qcrilnr",
+        "0003_version_update_wps_config_qcrilnr",
+        "0004_version_update_ecc_table_qcrilnr",
+        "0005_version_update_ecc_table_qcrilnr",
+        "0006_version_change_property_table_qcrilnr",
+        "0007_version_update_ecc_table_qcrilnr",
+        "0008_version_update_ecc_table",
+        "0009_version_update_ecc_table",
+        "0010_version_update_ecc_table",
+        "0011_version_update_ecc_table",
+        "0012_version_update_ecc_table",
+        "0013_version_update_ecc_table",
+        "0014_version_update_modules",
+        "0015_version_add_iccid_clir_pref_table",
+        "0006.0_config",
+        "0007.0_config",
+        "0008.0_config",
+        "0009.0_config",
+        "0010.0_config",
+        "0011.0_config",
+        "0012.0_config",
+        "0013.0_config",
+        "0014.0_config",
+        "0015.0_config",
+        "0015.1_config.sql",
+    ],
+}

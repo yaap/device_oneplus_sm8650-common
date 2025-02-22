@@ -607,9 +607,7 @@ function configure_zram_parameters() {
         let zRamSizeMB=4096
     fi
 
-    if [ "$low_ram" == "true" ]; then
-        echo lz4 > /sys/block/zram0/comp_algorithm
-    fi
+    echo lz4 > /sys/block/zram0/comp_algorithm
 
     if [ -f /sys/block/zram0/disksize ]; then
         if [ -f /sys/block/zram0/use_dedup ]; then
@@ -817,7 +815,8 @@ else
     # Set allocstall_threshold to 0 for all targets.
     # Set swappiness to 100 for all targets
     echo 0 > /sys/module/vmpressure/parameters/allocstall_threshold
-    echo 100 > /proc/sys/vm/swappiness
+    echo 0 > /proc/sys/vm/page-cluster
+    echo 60 > /proc/sys/vm/swappiness
 
     # Disable wsf for all targets beacause we are using efk.
     # wsf Range : 1..1000 So set to bare minimum value 1.
@@ -857,7 +856,7 @@ function start_hbtp()
 }
 
 case "$target" in
-        "pineapple")
+        "pineapple" | "cliffs")
                 if [ -f /sys/devices/soc0/chip_family ]; then
                         chip_family_id=`cat /sys/devices/soc0/chip_family`
                 else
@@ -867,7 +866,7 @@ case "$target" in
                 echo "adsprpc : chip_family_id : $chip_faily_id" > /dev/kmsg
 
                 case "$chip_family_id" in
-                    "0x8a")
+                    "0x8a" | "0x94")
                     if [ -f /sys/devices/platform/soc/soc:qcom,msm_fastrpc/fastrpc_nsp_status ]; then
                         fastrpc_nsp_status=`cat /sys/devices/platform/soc/soc:qcom,msm_fastrpc/fastrpc_nsp_status`
                     else
@@ -4660,6 +4659,7 @@ case "$target" in
 		echo N > /sys/module/lpm_levels/parameters/sleep_disabled
 	fi
 	echo N > /sys/module/lpm_levels/parameters/sleep_disabled
+
         # Set Memory parameters
         configure_memory_parameters
     ;;
