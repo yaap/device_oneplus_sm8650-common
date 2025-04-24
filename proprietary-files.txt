@@ -3067,6 +3067,8 @@ vendor/lib64/vendor.qti.hardware.qxr-V1-ndk.so
 vendor/lib64/vendor.qti.qegahal-V1-ndk_platform.so
 
 # RIL
+odm/bin/commcenterd
+odm/etc/init/commcenterd.rc
 odm/etc/oem_stx_platform_license.pfm
 odm/etc/vintf/manifest/device_manifest_communication_center_aidl.xml
 odm/lib64/lib-virtual-modem-protos.so
