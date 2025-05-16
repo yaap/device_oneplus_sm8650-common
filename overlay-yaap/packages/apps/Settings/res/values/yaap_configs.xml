@@ -11,4 +11,7 @@
     <!-- Show high touch polling rate -->
     <bool name="config_supportHighTouchRate">true</bool>
 
+    <!-- Hide VRR toggle -->
+    <bool name="config_disableVrrSetting">true</bool>
+
 </resources>
