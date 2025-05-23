@@ -224,7 +224,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
-$(call soong_config_set,qtidisplay,pxlw_vendor_namespace,vendor/oneplus/sm8650-common)
 $(call soong_config_set,qtidisplay,oplus_udfps,true)
 
 # Gatekeeper

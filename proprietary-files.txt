@@ -2168,92 +2168,47 @@ vendor/lib64/libhdrdynamic.so
 vendor/lib64/libhdrdynamicootf.so
 vendor/lib64/libhdrvivid.so
 
-# Display (HWC)
-vendor/bin/qdcmss
-vendor/etc/init/qdcmss.rc
-vendor/etc/snapdragon_color_libs_config.xml
-vendor/lib64/libdpp_manager.so
-vendor/lib64/libdpps.so
-vendor/lib64/libgame_enhance.so
-vendor/lib64/libmemutils.so
-vendor/lib64/libqdcm-algo.so
-vendor/lib64/libqdcm-json-mode-parser.so
-vendor/lib64/libqdcm-mode-parser.so
-vendor/lib64/libsnapdragoncolor-manager.so
-vendor/lib64/libsnapdragoncolor-qdcm.so
-vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
+# Display (HWC) -- pinned from Lanai.LA.1.0.r1-00865-STD.PROD-3
+vendor/bin/qdcmss|89da51d79b4d38dec556ee9e58abf8359aba449c
+vendor/etc/init/qdcmss.rc|53d78d686678c4f923a9ec4ace7d4d3575b13788
+vendor/etc/snapdragon_color_libs_config.xml|20be96679760b14cd63577a17f4a040e543254dd
+vendor/lib64/libdpps.so|0dce8fba58bc944a49ebcca4763fc49655b0d9c9
+vendor/lib64/libgame_enhance.so|2cdd5210b259e1dfa213dce44b12063daf32c451
+vendor/lib64/libmemutils.so|db009715d0682bba387cf885ab2383920d17dcec
+vendor/lib64/libqdcm-algo.so|4fedc2abaf531e6c4db59cdafc0243dfb0ed16fd
+vendor/lib64/libqdcm-json-mode-parser.so|43269d25fc0ba36d405c8fc591fecc2f11d8b12e
+vendor/lib64/libqdcm-mode-parser.so|fe9d26d84c5068d53740a882a492277164b71a24
+vendor/lib64/libsnapdragoncolor-manager.so|6a0112d02c9520aee43a9379984e655b68bb6851
+vendor/lib64/libsnapdragoncolor-qdcm.so|08adc1b438e414005fb8b41861ea9143cf6417c8
+vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so|1bff872dd27c023038d5efc8c2fa18d8b94777a7
 
-# Display (Pixelworks)
-odm/bin/hw/vendor.pixelworks.hardware.feature-service
-odm/bin/irisConfig
-odm/etc/init/vendor.pixelworks.hardware.feature-service-lazy.rc
-odm/etc/vintf/manifest/vendor.pixelworks.hardware.display-service.xml
-odm/etc/vintf/manifest/vendor.pixelworks.hardware.feature-service.xml
-odm/lib64/libpwirisIoctlWrapper.so
-odm/lib64/libpwirisPCS.so
-odm/lib64/libpwiriscalibrate.so
-odm/lib64/libpwirisfeature.so
-odm/lib64/libpwirisfeaturehal.so
-odm/lib64/libpwirishalwrapper.so
-odm/lib64/libpwirispq.so
-odm/lib64/libpwirisservicei7.so
-odm/lib64/libpwirisservicei7p.so
-odm/lib64/libpwirisservicesi.so
-odm/lib64/libpwirissoft.so
-odm/lib64/libpwsoftirisPCS.so
-odm/lib64/libsnapdragoncolor-pxlw.so
-odm/lib64/vendor.pixelworks.hardware.display-V2-ndk.so
-odm/lib64/vendor.pixelworks.hardware.display-impl-i7.so
-odm/lib64/vendor.pixelworks.hardware.display-impl-i7p.so
-odm/lib64/vendor.pixelworks.hardware.display-impl-si.so
-odm/lib64/vendor.pixelworks.hardware.display-translate-V2-ndk.so
-odm/lib64/vendor.pixelworks.hardware.display@1.0.so
-odm/lib64/vendor.pixelworks.hardware.display@1.1.so
-odm/lib64/vendor.pixelworks.hardware.display@1.2.so
-odm/lib64/vendor.pixelworks.hardware.feature-V1-ndk.so
-odm/lib64/vendor.pixelworks.hardware.feature@1.0.so
-odm/lib64/vendor.pixelworks.hardware.feature@1.1.so
-vendor/lib64/libpwirisfeature.so;MODULE_SUFFIX=_vendor
-vendor/lib64/libpwirishal.so
-vendor/lib64/libpwirishalwrapper.so;MODULE_SUFFIX=_vendor
-vendor/lib64/vendor.pixelworks.hardware.display@1.0.so;MODULE_SUFFIX=_vendor
-vendor/lib64/vendor.pixelworks.hardware.display@1.1.so;MODULE_SUFFIX=_vendor
-vendor/lib64/vendor.pixelworks.hardware.display@1.2.so;MODULE_SUFFIX=_vendor
-vendor/lib64/vendor.pixelworks.hardware.feature-V1-ndk.so;MODULE_SUFFIX=_vendor
-vendor/lib64/vendor.pixelworks.hardware.feature@1.0.so;MODULE_SUFFIX=_vendor
-vendor/lib64/vendor.pixelworks.hardware.feature@1.1.so;MODULE_SUFFIX=_vendor
-
-# Display (SDM)
-vendor/bin/init.qti.graphics.sh
-vendor/etc/clstc_config_library.xml
-vendor/etc/display/DPU1010.xml
-vendor/etc/display/DPU1020.xml
-vendor/etc/display/DPU10__.xml
-vendor/etc/display/DPU870.xml
-vendor/etc/display/DPU9__.xml
-vendor/etc/display/advanced_sf_offsets.xml
-vendor/etc/display/thermallevel_to_fps.xml
-vendor/etc/init/init.qti.graphics.rc
-vendor/lib64/libbacklight-calib.so
-vendor/lib64/libclstc_algorithm_adapter.so
-vendor/lib64/libclstc_gcp_adapter.so
-vendor/lib64/libclstc_tm.so
-vendor/lib64/libdigital-dimming.so
-vendor/lib64/libdisplayqos.so
-vendor/lib64/libdisplayskuutils.so
-vendor/lib64/libhdr_backlight_adapter.so
-vendor/lib64/libintervmipc.so
-vendor/lib64/libqrtrclient.so
-vendor/lib64/libqseed3.so
-vendor/lib64/librcmask.so
-vendor/lib64/libsdedrm.so
-vendor/lib64/libsdm-color.so
-vendor/lib64/libsdm-colormgr-algo.so
-vendor/lib64/libsdm-disp-vndapis.so
-vendor/lib64/libsdmextension.so
-vendor/lib64/libtestutils.so
-vendor/lib64/libtinyxml2_1.so
-vendor/lib64/libvmfilexfer.so
+# Display (SDM) -- pinned from Lanai.LA.1.0.r1-00865-STD.PROD-3
+vendor/etc/clstc_config_library.xml|7f0ff3399505bfbe4b5a9133201fd0de60e051f9
+vendor/etc/display/DPU10__.xml|0f19bb3e57483d45a603e13b0211ea3e2cac6a1b
+vendor/etc/display/DPU9__.xml|691b8c27d488efb486520ecda6a7b52c1d4fa582
+vendor/etc/display/advanced_sf_offsets.xml|6e6ecdc4ab94ca596c6c697727cfdd7a53a9c29e
+vendor/etc/display/thermallevel_to_fps.xml|bc38035c8f41308fc25cc30969fbbf16ab86c43f
+vendor/lib64/libbacklight-calib.so|7a459c407b3f3a5fac2a898d56bc4e2d5805e227
+vendor/lib64/libclstc_algorithm_adapter.so|cead2109e4dc4729300fc5ddbb00454c04d00979
+vendor/lib64/libclstc_gcp_adapter.so|15d04688b95a379ccadc5c0104cd57b5fe60fd40
+vendor/lib64/libclstc_tm.so|defe46b94aeb8837e0379b632a319b933f22c707
+vendor/lib64/libdigital-dimming.so|9f12d6dbc5256401b373601c05adb9fb76851661
+vendor/lib64/libdisplayqos.so|7727cf760f7323f8f48188c4c54a7dbd2c464162
+vendor/lib64/libdisplayskuutils.so|a34e100271c0934a4b783176fbe6c0883cafaa09
+vendor/lib64/libhdr_backlight_adapter.so|522bf7876da2a225fdebcbaea0dca0a21dac940b
+vendor/lib64/libintervmipc.so|8b2e43e3d1bd8d2dfcb57b803dde746d0fb3c342
+vendor/lib64/libmm-hdcpmgr.so|04c49d9e4cdce82dbbb0acf8ea24a3fc0b41ec50
+vendor/lib64/libqrtrclient.so|29a9590383382a44b27f854b6a43e9844f8ace2c
+vendor/lib64/libqseed3.so|3fe94be52f64c2364f46858f1d34130c62f7e810
+vendor/lib64/librcmask.so|adb732791eee4ccbd2b88623902052161b9c6dd1
+vendor/lib64/libsdm-color.so|9865fc1029126e066ba532cbf6bd73566b37e6dc
+vendor/lib64/libsdm-colormgr-algo.so|6053799be1922cf3ddfb3f09d2a57cfd8297afa8
+vendor/lib64/libsdm-disp-vndapis.so|62454082aaec1b693d9c1c404d1ec7a6406eb260
+vendor/lib64/libsdmextension.so|a036c5d071b4f547c69d81427b114e2aa7bda678
+vendor/lib64/libtestutils.so|330694edb1cf449c8dab7bc1ddb452bb364d2f5d
+vendor/lib64/libtinyxml2_1.so|b6c0ae5f74d3c58369467ee2b7ddac04bf71ecf9
+vendor/lib64/libubwcp.so|7107a70407f4a5ce1c96663ce1807a04340fb6ca
+vendor/lib64/libvmfilexfer.so|e3f325a52df583d106745664dcc31df6554ebd29
 
 # Display calibration data
 vendor/etc/display/perf_hint_threshold.xml
@@ -2581,7 +2536,6 @@ vendor/bin/hdcp2p2prov
 vendor/lib64/libhdcp1prov.so
 vendor/lib64/libhdcp2p2prov.so
 vendor/lib64/libhdcpsrm.so
-vendor/lib64/libmm-hdcpmgr.so
 
 # Hotword Enrollment
 my_product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml:product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml
@@ -3543,7 +3497,6 @@ vendor/firmware/vpu33_4v_unsigned.mbn
 
 # UBWCP
 vendor/bin/ubwcconvert
-vendor/lib64/libubwcp.so
 
 # Widevine DRM
 vendor/apex/com.google.android.widevine.nonupdatable.apex
