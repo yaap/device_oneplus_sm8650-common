@@ -2182,11 +2182,13 @@ vendor/lib64/libsnapdragoncolor-manager.so|6a0112d02c9520aee43a9379984e655b68bb6
 vendor/lib64/libsnapdragoncolor-qdcm.so|08adc1b438e414005fb8b41861ea9143cf6417c8
 vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so|1bff872dd27c023038d5efc8c2fa18d8b94777a7
 
+# Display (Unpinned)
+vendor/etc/display/advanced_sf_offsets.xml
+
 # Display (SDM) -- pinned from Lanai.LA.1.0.r1-00865-STD.PROD-3
 vendor/etc/clstc_config_library.xml|7f0ff3399505bfbe4b5a9133201fd0de60e051f9
 vendor/etc/display/DPU10__.xml|0f19bb3e57483d45a603e13b0211ea3e2cac6a1b
 vendor/etc/display/DPU9__.xml|691b8c27d488efb486520ecda6a7b52c1d4fa582
-vendor/etc/display/advanced_sf_offsets.xml|6e6ecdc4ab94ca596c6c697727cfdd7a53a9c29e
 vendor/etc/display/thermallevel_to_fps.xml|bc38035c8f41308fc25cc30969fbbf16ab86c43f
 vendor/lib64/libbacklight-calib.so|7a459c407b3f3a5fac2a898d56bc4e2d5805e227
 vendor/lib64/libclstc_algorithm_adapter.so|cead2109e4dc4729300fc5ddbb00454c04d00979
