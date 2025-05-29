@@ -204,6 +204,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
 
+$(call soong_config_set,qtidisplay,bitclk_rate_permissive,true)
+$(call soong_config_set,surfaceflinger,frame_rate_category_high,120)
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-V1-ndk.vendor \
@@ -225,7 +228,6 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.fingerprint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.fingerprint.xml
 
 $(call soong_config_set,qtidisplay,oplus_udfps,true)
-$(call soong_config_set,qtidisplay,bitclk_rate_permissive,true)
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
