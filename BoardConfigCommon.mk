@@ -124,16 +124,10 @@ BOARD_MKBOOTIMG_INIT_ARGS += --header_version $(BOARD_INIT_BOOT_HEADER_VERSION)
 BOARD_BOOTCONFIG := \
     androidboot.hardware=qcom \
     androidboot.hypervisor.protected_vm.supported=true \
-    androidboot.load_modules_parallel=true \
     androidboot.memcg=1 \
     androidboot.vendor.qspa=true \
     androidboot.usbcontroller=a600000.dwc3 \
     androidboot.console=0
-
-# The modules which need to be loaded sequentially
-BOARD_KERNEL_CMDLINE += msm_drm.load_sequential=1 msm-eva.load_sequential=1 msm_geni_serial.load_sequential=1
-BOARD_KERNEL_CMDLINE += oplus_bsp_synaptics_tcm2.load_sequential=1 aw8697.load_sequential=1
-BOARD_KERNEL_CMDLINE += qti_qmi_sensor_v2.load_sequential=1 oplus_sensor_interact.load_sequential=1
 
 TARGET_KERNEL_CLANG_VERSION := r547379
 
