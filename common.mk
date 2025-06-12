@@ -691,3 +691,6 @@ PRODUCT_BOOT_JARS += \
 
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/oneplus/sm8650-common/sm8650-common-vendor.mk)
+
+# lindroid
+$(call inherit-product, vendor/lindroid/lindroid.mk)

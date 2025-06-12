@@ -111,6 +111,7 @@ BOARD_BOOTCONFIG := \
     androidboot.memcg=1 \
     androidboot.vendor.qspa=true \
     androidboot.usbcontroller=a600000.dwc3 \
+    androidboot.selinux=permissive \
     androidboot.console=0
 
 TARGET_KERNEL_CLANG_VERSION := r547379
