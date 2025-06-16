@@ -13,7 +13,6 @@ camcc-cliffs.ko
 camcc-pineapple.ko
 camcc-volcano.ko
 cdsprm.ko
-charger-ulog-glink.ko
 clk-dummy.ko
 clk-qcom.ko
 clk-rpmh.ko
@@ -48,7 +47,6 @@ ddr_cdev.ko
 debugcc-cliffs.ko
 debugcc-pineapple.ko
 debugcc-volcano.ko
-debug-regulator.ko
 debug_symbol.ko
 device_info.ko
 dispcc-pineapple.ko
@@ -59,7 +57,6 @@ drm_dp_aux_bus.ko
 dwc3-msm.ko
 dynpf_scmi.ko
 eud.ko
-f_fs_ipc_log.ko
 fsa4480-i2c.ko
 gcc-cliffs.ko
 gcc-pineapple.ko
@@ -98,7 +95,6 @@ i3c-master-msm-geni.ko
 icc-bcm-voter.ko
 icc-debug.ko
 icc-rpmh.ko
-icc-test.ko
 iommu-logger.ko
 kernel_fb.ko
 leds-qpnp-vibrator-ldo.ko
@@ -118,7 +114,6 @@ memory_dump_v2.ko
 mhi_dev_satellite.ko
 mhi_dev_uci.ko
 mhi.ko
-minidump.ko
 mpam.ko
 msm_dma_iommu_mapping.ko
 msm_drm.ko
@@ -168,7 +163,6 @@ qcom_aoss.ko
 qcom_cpucp.ko
 qcom-cpufreq-hw-debug.ko
 qcom-cpufreq-hw.ko
-qcom_cpuss_sleep_stats.ko
 qcom_cpu_vendor_hooks.ko
 qcom-dcvs.ko
 qcom-dload-mode.ko
@@ -180,10 +174,8 @@ qcom_glink_spss.ko
 qcom-hv-haptics.ko
 qcom_hwspinlock.ko
 qcom-i2c-pmic.ko
-qcom_iommu_debug.ko
 qcom_iommu_util.ko
 qcom-ipcc.ko
-qcom_ipc_logging.ko
 qcom_llcc_pmu.ko
 qcom_logbuf_boot_log.ko
 qcom_logbuf_vendor_hooks.ko
@@ -211,7 +203,6 @@ qcom_stats.ko
 qcom_sysmon.ko
 qcom_tsens.ko
 qcom-vadc-common.ko
-qcom_va_minidump.ko
 qcom_wdt_core.ko
 qfprom-sys.ko
 qmi_helpers.ko
@@ -237,7 +228,6 @@ qti-glink-adc.ko
 qti-ocp-notifier.ko
 qti_qmi_cdev.ko
 qti_qmi_sensor_v2.ko
-qti-regmap-debugfs.ko
 qti_userspace_cdev.ko
 rdbg.ko
 reboot-mode.ko
@@ -276,7 +266,6 @@ sysmon_subsystem_stats.ko
 sys_pm_vx.ko
 tcsrcc-pineapple.ko
 thermal_config.ko
-thermal_minidump.ko
 thermal_pa_adc.ko
 thermal_pause.ko
 tmecom-intf.ko

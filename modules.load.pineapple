@@ -17,7 +17,6 @@ camera.ko
 cdsp-loader.ko
 cdsprm.ko
 cfg80211.ko
-charger-ulog-glink.ko
 cnss2.ko
 cnss_nl.ko
 cnss_plat_ipc_qmi_svc.ko
@@ -53,7 +52,6 @@ drm_dp_aux_bus.ko
 dwc3-msm.ko
 dynpf_scmi.ko
 eud.ko
-f_fs_ipc_log.ko
 frpc-adsprpc.ko
 fsa4480-i2c.ko
 gh_ctrl.ko
@@ -145,14 +143,12 @@ qca_cld3_kiwi_v2.ko
 qce50_dlkm.ko
 qcedev-mod_dlkm.ko
 qcom-cpufreq-hw-debug.ko
-qcom_cpuss_sleep_stats.ko
 qcom-dload-mode.ko
 qcom_edac.ko
 qcom_glink.ko
 qcom_glink_smem.ko
 qcom_glink_spss.ko
 qcom-hv-haptics.ko
-qcom_iommu_debug.ko
 qcom_lpm.ko
 qcom_pil_info.ko
 qcom_pm8008-regulator.ko
