@@ -29,6 +29,7 @@ const std::unordered_map<int, std::string> kRegionMap = {
         {68, "EU"},
         {151, "CN"},
         {161, "NA"},
+        {167, "ROW"},
 };
 }  // anonymous namespace
 
