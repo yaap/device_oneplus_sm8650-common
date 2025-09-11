@@ -21,9 +21,6 @@ ro.oplus.camera.facing.front.need.disable.nfc=1
 oplus.software.camera.10bit=1
 ro.camera.notify_nfc=1
 
-# Display
-persist.vendor.display.pxlw.iris_feature=0x417f0780
-
 # Radio
 persist.vendor.radio.virtualcomm=1
 persist.vendor.radio.wait_for_pbm=0
