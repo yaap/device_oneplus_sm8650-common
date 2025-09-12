@@ -1,5 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-	<!-- the branch name to format URLs with -->
-	<string name="url_branch_name">full-signed-1</string>
-</resources>

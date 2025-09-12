@@ -41,24 +41,6 @@ function lib_to_package_fixup_vendor_variants() {
 
     case "$1" in
         com.qualcomm.qti.dpm.api@1.0 | \
-        com.qti.sensor.lyt808 | \
-            libarcsoft_triple_sat | \
-            libarcsoft_triple_zoomtranslator | \
-            libdualcam_optical_zoom_control | \
-            libdualcam_video_optical_zoom | \
-            libhwconfigurationutil | \
-            libtriplecam_optical_zoom_control | \
-            libtriplecam_video_optical_zoom | \
-            vendor.oplus.hardware.camera_rfi-V1-ndk | \
-            vendor.oplus.hardware.cammidasservice-V1-ndk | \
-            vendor.oplus.hardware.displaycolorfeature-V1-ndk | \
-            vendor.oplus.hardware.displaypanelfeature-V1-ndk | \
-            vendor.pixelworks.hardware.display@1.0 | \
-            vendor.pixelworks.hardware.display@1.1 | \
-            vendor.pixelworks.hardware.display@1.2 | \
-            vendor.pixelworks.hardware.feature@1.0 | \
-            vendor.pixelworks.hardware.feature@1.1 | \
-            vendor.pixelworks.hardware.feature-V1-ndk | \
             vendor.qti.diaghal@1.0 | \
             vendor.qti.hardware.dpmservice@1.0 | \
             vendor.qti.hardware.dpmaidlservice-V1-ndk | \

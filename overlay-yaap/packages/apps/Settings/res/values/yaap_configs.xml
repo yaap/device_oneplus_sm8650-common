@@ -5,14 +5,8 @@
 -->
 <resources>
 
-    <!-- Show haptic styles -->
-    <bool name="config_supportHapticProfiles">true</bool>
-
     <!-- Show high touch polling rate -->
     <bool name="config_supportHighTouchRate">true</bool>
-
-    <!-- Show ltpo features -->
-    <bool name="config_supportLtpoFeatures">true</bool>
 
     <!-- Hide VRR toggle -->
     <bool name="config_disableVrrSetting">true</bool>
