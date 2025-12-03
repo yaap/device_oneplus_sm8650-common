@@ -815,13 +815,10 @@ odm/lib64/libosensenativeproxy_client.so
 odm/bin/hw/gauged
 odm/bin/hw/vendor.oplus.hardware.charger-V9-service
 odm/bin/hw/wlschgd
-odm/etc/charge.cfg
 odm/etc/init/vendor.oplus.hardware.charger-V9-service.rc
 odm/etc/vintf/manifest/manifest_oplus_charger_aidl.xml
-odm/etc/permissions/vendor-oplus-hardware-charger.xml
-odm/lib64/vendor.oplus.hardware.charger@1.0.so
-system_ext/framework/vendor.oplus.hardware.charger-V1-java.jar
-system_ext/framework/vendor.oplus.hardware.charger-V8-java.jar
+odm/etc/charge.cfg
+odm/lib64/libGaiaClient_vnd.so
 
 # PD
 vendor/bin/pd-mapper
