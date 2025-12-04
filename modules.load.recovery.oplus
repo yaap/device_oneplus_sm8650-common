@@ -74,5 +74,6 @@ oplus_storage_log.ko
 oplus_trackpoint_report.ko
 oplus_uprobe.ko
 oplus_wireless_pen.ko
+oplus_thermal_vendor_hooks.ko
 qbridge.ko
 test-kit.ko

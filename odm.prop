@@ -39,4 +39,4 @@ ro.vendor.oplus.sensor.lb_algo=true
 ro.vendor.oplus.sensor.use_black_mode=true
 
 # SVN
-ro.build.version.svn=33
+ro.build.version.svn=36

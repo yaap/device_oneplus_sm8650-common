@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from OnePlus 12 (CPH2581_15.0.0.863(EX01)).
+## are from OnePlus 12 (CPH2581_16.0.1.300(EX01)).
 
 # Current blobs with ELF checks disabled:
 # libOPAlgoCamFaceBeautyCap, libEIS, libHIS, libOGLManager, libarcsoft_high_dynamic_range_v4 depends on NDK libnativewindow and build is unable to resolve its symbols
@@ -1597,6 +1597,8 @@ odm/lib64/libarcsoft_videoautozoom.so;FIX_SONAME
 odm/lib64/libc++_shared.so
 odm/lib64/libcalculator.so
 odm/lib64/libcalculator_htp.so
+odm/lib64/libcreateFDCLitecachebin.so
+odm/lib64/libcreateFDCcachebin.so
 odm/lib64/libcreatebin.so
 odm/lib64/libcvface_api.so
 odm/lib64/libdualcam_optical_zoom_control.so

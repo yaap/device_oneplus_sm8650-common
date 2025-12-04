@@ -71,5 +71,6 @@ oplus_sensor_kookong_ir_spi.ko
 oplus_smp2p.ko
 oplus_sync_fence.ko
 oplus_trackpoint_report.ko
+oplus_thermal_vendor_hooks.ko
 oplus_wireless_pen.ko
 qbridge.ko
