@@ -1167,6 +1167,8 @@ vendor/lib64/libminkdescriptor.so
 vendor/lib64/libminksocket_vendor.so
 vendor/lib64/libnative-api.so
 vendor/lib64/libqcbor.so
+vendor/etc/ssg/ta_config.json
+vendor/lib64/libtaautoload.so
 
 # Secure element
 odm/bin/hw/android.hardware.secure_element-service.qti
@@ -1224,7 +1226,9 @@ vendor/etc/init/vendor.sensors.qti.rc
 vendor/etc/init/vendor.sensors.sscrpcd.rc
 vendor/etc/permissions/vendor-qti-hardware-sensorscalibrate.xml
 vendor/etc/vintf/manifest/vendor.qti.hardware.sensorscalibrate.xml
+vendor/lib64/libnanopb.so
 vendor/lib64/libqsh.so
+vendor/lib64/libqsh_ble_pb.so
 vendor/lib64/libsensor_calibration.so
 vendor/lib64/libsensorcal.so
 vendor/lib64/libsensorslog.so
@@ -1343,6 +1347,11 @@ vendor/lib64/vendor.qti.hardware.soter-V1-ndk.so
 # TinyXML2
 system/lib64/libtinyxml2.so:vendor/lib64/libtinyxml2_stock.so;FIX_SONAME
 
+# Synx
+vendor/lib64/libos.so
+vendor/lib64/libsynx.so
+vendor/lib64/libthreadutils.so
+
 # TFTP
 vendor/bin/tftp_server
 vendor/etc/init/vendor.qti.tftp.rc
@@ -1377,7 +1386,6 @@ vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so
 vendor/lib64/libTxPwrJni.so
 vendor/lib64/libcpion.so
 vendor/lib64/libsi.so
-vendor/lib64/libtaautoload.so
 vendor/lib64/libtrustedapploader.so
 
 # Video
@@ -1415,7 +1423,10 @@ vendor/apex/com.google.android.widevine.nonupdatable.apex
 vendor/etc/oplus_Widevine_licenses.pfm
 
 # WiFi
+odm/bin/init.oplus.wifi.sh
+odm/etc/init/hw/init.oplus.wifi.rc
 vendor/bin/cnss-daemon
+vendor/etc/init/init.vendor.wlan.rc
 vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/vendor_cmd.xml
 vendor/etc/wifi/wpa_supplicant_overlay.conf
