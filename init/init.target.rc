@@ -250,7 +250,7 @@ on property:vendor.post_boot.parsed=1
 
     #background
     write /dev/cpuctl/background/cpu.uclamp.max max
-    write /dev/cpuctl/background/cpu.uclamp.min 20
+    write /dev/cpuctl/background/cpu.uclamp.min 0
     write /dev/cpuctl/background/cpu.uclamp.latency_sensitive 0
 
     #system-background
