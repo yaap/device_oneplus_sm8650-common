@@ -234,16 +234,16 @@ on property:vendor.post_boot.parsed=1
     setprop dalvik.vm.dex2oat-threads 6
 
     # Uclamp tunings
-    setprop kernel.sched_util_clamp_min_rt_default 128
-    write /proc/sys/kernel/sched_util_clamp_min_rt_default 128
+    setprop kernel.sched_util_clamp_min_rt_default 0
+    write /proc/sys/kernel/sched_util_clamp_min_rt_default 0
 
     #top-app
     write /dev/cpuctl/top-app/cpu.uclamp.max max
-    write /dev/cpuctl/top-app/cpu.uclamp.min 20
-    write /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive 1
+    write /dev/cpuctl/top-app/cpu.uclamp.min 2
+    write /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive 0
 
     #foreground
-    write /dev/cpuctl/foreground/cpu.uclamp.max 80
+    write /dev/cpuctl/foreground/cpu.uclamp.max max
     write /dev/cpuctl/foreground/cpu.uclamp.min 0
     write /dev/cpuctl/foreground/cpu.uclamp.latency_sensitive 0
 
@@ -259,13 +259,13 @@ on property:vendor.post_boot.parsed=1
 
     #nnapi-hal
     write /dev/cpuctl/nnapi-hal/cpu.uclamp.max max
-    write /dev/cpuctl/nnapi-hal/cpu.uclamp.min 40
-    write /dev/cpuctl/nnapi-hal/cpu.uclamp.latency_sensitive 1
+    write /dev/cpuctl/nnapi-hal/cpu.uclamp.min 0
+    write /dev/cpuctl/nnapi-hal/cpu.uclamp.latency_sensitive 0
 
     #camera-daemon
     write /dev/cpuctl/camera-daemon/cpu.uclamp.max max
-    write /dev/cpuctl/camera-daemon/cpu.uclamp.min 20
-    write /dev/cpuctl/camera-daemon/cpu.uclamp.latency_sensitive 1
+    write /dev/cpuctl/camera-daemon/cpu.uclamp.min 0
+    write /dev/cpuctl/camera-daemon/cpu.uclamp.latency_sensitive 0
 
     # Switch to schedutil
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor schedutil
