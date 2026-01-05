@@ -236,7 +236,6 @@ on property:vendor.post_boot.parsed=1
     # Uclamp tunings
     setprop kernel.sched_util_clamp_min_rt_default 0
     write /proc/sys/kernel/sched_util_clamp_min_rt_default 0
-    write /proc/sys/kernel/sched_util_clamp_min 128
 
     #top-app
     write /dev/cpuctl/top-app/cpu.uclamp.max max
