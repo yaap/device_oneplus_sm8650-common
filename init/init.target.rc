@@ -234,8 +234,8 @@ on property:vendor.post_boot.parsed=1
     setprop dalvik.vm.dex2oat-threads 6
 
     # Uclamp tunings
-    setprop kernel.sched_util_clamp_min_rt_default 0
-    write /proc/sys/kernel/sched_util_clamp_min_rt_default 0
+    setprop kernel.sched_util_clamp_min_rt_default 128
+    write /proc/sys/kernel/sched_util_clamp_min_rt_default 128
 
     #top-app
     write /dev/cpuctl/top-app/cpu.uclamp.max max
