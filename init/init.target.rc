@@ -114,7 +114,7 @@ on boot
     write /dev/cpuset/background/cpus 0-1
     write /dev/cpuset/camera-daemon/cpus 0-7
     write /dev/cpuset/camera-daemon/mems 0
-    write /dev/cpuset/display/cpus 2-6
+    write /dev/cpuset/display/cpus 0-6
     write /dev/cpuset/foreground/cpus 0-4
     write /dev/cpuset/system-background/cpus 0-1
     write /dev/cpuset/top-app/cpus 0-7
