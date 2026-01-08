@@ -2145,7 +2145,7 @@ vendor/lib64/vendor.qti.hardware.embmssl@1.1.so
 vendor/lib64/vendor.qti.hardware.embmsslaidl-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.radio.atfwd-V1-ndk.so
 
-# Data (RIL) - Pinned from Asus WW-35.1210.1420.150
+# Data (RIL) - Pinned from Asus WW-36.0210.1420.27
 vendor/etc/data/dsi_config.xml|b72d8f7cea51d1317dcf1852016537855d7a7c70
 vendor/etc/data/nicm_config.xml|582d3b9be493883f55b3e59036e865e0194c6e59
 vendor/etc/data/tlpd_oem_config.xml|c8d40cdc8b34dd132c61372459c09d84db90baa6
@@ -2681,7 +2681,7 @@ system_ext/etc/sysconfig/qti_whitelist_system_ext.xml|fc930929bee7d1f8ecc5b1c761
 -system_ext/lib64/vendor.qti.imsrtpservice@3.1.so|33008343e8ac15821278faecc1c234e8bea3fe2d
 -system_ext/priv-app/ims/ims.apk;NODEXPO|a7f6f9f5634efa143fe0daa5065d74b91f3e780c
 
-# IMS(VENDOR) - pinned from Asus WW-35.1210.1420.150
+# IMS(VENDOR) - pinned from WW-36.0210.1420.27
 vendor/etc/init/ims-dataservice-daemon.rc|bf7f184c8975bd6af457d5b9ec544174bf09a2ab
 vendor/etc/init/ims_rtp_daemon.rc|9eac78a24604733b51492df7454932ef81def2b1
 vendor/etc/init/imsdaemon.rc|18bbe0185cece34299e92a5f4f309b59ea93d684
@@ -3024,7 +3024,7 @@ vendor/lib64/vendor.qti.qesdhalaidl-V2-ndk.so
 vendor/lib64/vendor.qti.qesdsys-V3-ndk.so
 vendor/lib64/vendor.qti.qesdsys-V4-ndk.so
 
-# QMI - Pinned from Asus WW-35.1210.1420.150
+# QMI - Pinned from Asus WW-36.0210.1420.27
 system/etc/sysconfig/qti_whitelist.xml|38dce21136ead726fc0f57504b837c2511cdd3a1
 vendor/etc/init/init.qlm-service.rc|ca1152b1eaadfb438562b0bd488ee923a05f02c5
 vendor/etc/init/qmipriod.debug.rc|94d421875f35fdcb170070f20a221466ad87f97e
@@ -3097,7 +3097,7 @@ vendor/lib64/libtracker_6dof_impl.so
 vendor/lib64/vendor.qti.hardware.qxr-V1-ndk.so
 vendor/lib64/vendor.qti.qegahal-V1-ndk_platform.so
 
-# RIL - Pinned from Asus WW-35.1210.1420.150
+# RIL - Pinned from Asus WW-36.0210.1420.27
 product/etc/permissions/UimGba.xml|03eb0916550720f168c4f66acdc3fc4abf9993ef
 product/etc/permissions/UimGbaManager.xml|b57f4d048d860d27367df0f0feee6cc78991dfe3
 product/etc/permissions/UimService.xml|cb32679d345f98d5b8ec175c5c3429a2e3718882
