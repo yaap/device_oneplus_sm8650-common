@@ -220,9 +220,9 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
 # Camera(modded)
-odm/lib64/camera/com.qti.sensormodule.qtech_imx581.bin|3d29498a2bd9082ece52337e52fac056f62982af
-odm/lib64/camera/com.qti.sensormodule.sunny_lyt808.bin|415e8db8fa7330dc9e6b634c849a3a24d99febed
-odm/lib64/camera/com.qti.sensormodule.sunny_ov64b40_tele.bin|3426668f7577d5f3fb90e4af85e4c496395819c2
+odm/lib64/camera/com.qti.sensormodule.qtech_imx581.bin|9d463118188b113ee9a6a2ef88e67b72c0b0bd3b
+odm/lib64/camera/com.qti.sensormodule.sunny_lyt808.bin|6f0eb4b69154d13556bd96e451665199b1bd3f4f
+odm/lib64/camera/com.qti.sensormodule.sunny_ov64b40_tele.bin|c55d7b4f64d0a82e8d6ef1ebec82951448295978
 odm/lib64/camera/com.qti.tuned.qtech_imx581_wide.bin|9f13572eedab7cefa64f5c14d79127ad03cc85d8
 odm/lib64/camera/com.qti.tuned.qtech_imx615_front.bin|a150ac9fa8a7f99e7b330851435d63ff801e7c29
 odm/lib64/camera/com.qti.tuned.qtech_lyt808_main.bin|0b699b088cf0bf9445c7ecdd94d23b385e8b1842
