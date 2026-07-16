@@ -11,4 +11,9 @@
     <!-- Show DC Dim settings and schedule -->
     <bool name="config_showDcDimSettings">true</bool>
 
+    <!-- Whether Settings should open a separate camera preview during face enrollment -->
+    <bool name="config_face_enroll_hal_owns_camera">true</bool>
+
+    <!-- Whether the face HAL supports the require attention feature -->
+    <bool name="config_face_attention_supported">false</bool>
 </resources>

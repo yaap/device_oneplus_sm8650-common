@@ -79,6 +79,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             sed -i "8i\    task_profiles ProcessCapacityHigh MaxPerformance" "${2}"
             ;;
+        odm/bin/hw/vendor.oplus.hardware.biometrics.face@1.0-service)
+            [ "$2" = "" ] && return 0
+            grep -q "libbase_shim.so" "${2}" || "${PATCHELF}" --add-needed "libbase_shim.so" "${2}"
+            ;;
         odm/etc/init/init.touchDaemon.rc)
             [ "$2" = "" ] && return 0
             sed -i "7i\    task_profiles ProcessCapacityHigh MaxPerformance" "${2}"
@@ -173,6 +177,11 @@ function blob_fixup() {
         vendor/lib64/libqcrilNr.so|vendor/lib64/libril-db.so)
             [ "$2" = "" ] && return 0
             sed -i "s|persist.vendor.radio.poweron_opt|persist.vendor.radio.poweron_ign|" "${2}"
+            ;;
+	vendor/lib64/libcamera2ndk_vendor.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "android.frameworks.cameraservice.device-V1-ndk.so" "android.frameworks.cameraservice.device-V3-ndk.so" "${2}"
+            "${PATCHELF}" --replace-needed "android.frameworks.cameraservice.service-V1-ndk.so" "android.frameworks.cameraservice.service-V3-ndk.so" "${2}"
             ;;
         vendor/lib64/vendor.libdpmframework.so)
             [ "$2" = "" ] && return 0
