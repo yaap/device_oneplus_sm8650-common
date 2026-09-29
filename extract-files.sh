@@ -79,6 +79,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             sed -i "8i\    task_profiles ProcessCapacityHigh MaxPerformance" "${2}"
             ;;
+        odm/etc/init/vendor.oplus.hardware.biometrics.face@1.0-service.rc)
+            [ "$2" = "" ] && return 0
+            sed -i "8i\    task_profiles ProcessCapacityHigh MaxPerformance" "${2}"
+            ;;
         odm/bin/hw/vendor.oplus.hardware.biometrics.face@1.0-service)
             [ "$2" = "" ] && return 0
             grep -q "libbase_shim.so" "${2}" || "${PATCHELF}" --add-needed "libbase_shim.so" "${2}"
