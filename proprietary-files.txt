@@ -119,7 +119,6 @@ vendor/etc/models/acd/music.eai
 vendor/etc/models/acd/speech.eai
 vendor/etc/models/vui/sm8_gr1UsPdk6XsMfcn220819Enpu4FloateAIv34.uim
 vendor/etc/models/vui/sm8_gr3UsMFCN230612eAIv34ENPUv4Float.uim
-vendor/etc/seccomp_policy/qsap_voiceui.policy
 vendor/lib64/hw/audio.primary.pineapple.so;DISABLE_CHECKELF
 vendor/lib64/libAlacSwDec.so
 vendor/lib64/libApeSwDec.so
@@ -144,8 +143,6 @@ vendor/lib64/liblistensoundmodel2vendor.so
 vendor/lib64/libmcs.so;DISABLE_CHECKELF
 vendor/lib64/libqtigefar.so;DISABLE_CHECKELF
 vendor/lib64/libtensorflowlite_c.so:vendor/lib64/libtensorflowlite_c_vendor.so;FIX_SONAME
-vendor/lib64/libvui_dmgr.so;DISABLE_CHECKELF
-vendor/lib64/libvui_dmgr_client.so;DISABLE_CHECKELF
 vendor/lib64/libvui_intf.so;DISABLE_CHECKELF
 vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.ListenSoundModel@1.0.so
@@ -524,7 +521,6 @@ vendor/etc/sap.conf
 vendor/etc/sec_config
 vendor/etc/seccomp_policy/gnss@2.0-base.policy
 vendor/etc/seccomp_policy/gnss@2.0-edgnss-daemon.policy
-vendor/etc/seccomp_policy/gnss@2.0-qsap-location.policy
 vendor/etc/seccomp_policy/gnss@2.0-xtra-daemon.policy
 vendor/etc/seccomp_policy/gnss@2.0-xtwifi-client.policy
 vendor/etc/vintf/manifest/android.hardware.gnss-aidl-service-qti.xml
@@ -559,7 +555,6 @@ vendor/lib64/liblocation_api.so
 vendor/lib64/liblocation_api_msg.so
 vendor/lib64/liblocation_client_api.so
 vendor/lib64/liblocation_integration_api.so
-vendor/lib64/liblocation_qesdk.so
 vendor/lib64/liblocationservice.so
 vendor/lib64/liblocationservice_glue.so
 vendor/lib64/liblocdiagiface.so
@@ -873,8 +868,6 @@ system_ext/lib64/vendor.qti.qccsyshal_aidl-halimpl.so
 system_ext/lib64/vendor.qti.qccvndhal_aidl-V1-ndk.so
 vendor/bin/qcc-vendor
 vendor/etc/init/init.qccvendor.rc
-vendor/etc/seccomp_policy/qesdk.policy
-vendor/etc/vintf/manifest/qesdk-manager.xml
 vendor/etc/vintf/manifest/vendor.qti.qccvndhal_aidl-service.xml
 vendor/lib64/libqcc_file_agent.so
 vendor/lib64/libqcc_sdk.so
@@ -887,23 +880,6 @@ vendor/lib64/vendor.qti.qccvndhal_aidl-halimpl.so
 # QCV
 vendor/bin/init.qti.qcv.sh
 vendor/etc/init/init.qti.qcv.rc
-
-# QESDK
-vendor/bin/qesdk-manager
-vendor/etc/init/qesdk-manager.rc
-vendor/etc/init/qesdk-secmanager.rc
-vendor/etc/seccomp_policy/qesdksec.policy
-vendor/lib64/libqesdk2_0.so
-vendor/lib64/libqesdk_manager.so
-vendor/lib64/libqesdoem_query_sys.so
-vendor/lib64/vendor.qti.qesdhal-impl.so
-vendor/lib64/vendor.qti.qesdhal@1.0.so
-vendor/lib64/vendor.qti.qesdhal@1.1.so
-vendor/lib64/vendor.qti.qesdhal@1.2.so
-vendor/lib64/vendor.qti.qesdhal@1.3.so
-vendor/lib64/vendor.qti.qesdhalaidl-V2-ndk.so
-vendor/lib64/vendor.qti.qesdsys-V3-ndk.so
-vendor/lib64/vendor.qti.qesdsys-V4-ndk.so
 
 # QMI - Pinned from Asus WW-36.0210.1420.39
 system/etc/sysconfig/qti_whitelist.xml|9dc30503dd5ae29e6a2b4a4b7f8b0653ff5e06f7
@@ -1027,7 +1003,6 @@ vendor/etc/telephony_packages.xml|74e46752734db56332d2dd79ee1a1d89cb5dd328
 -vendor/lib64/libqcrildatactl.so|c0d262fdbaaccf155787dc20647d2950efd21f28
 -vendor/lib64/libqcrildataqos.so|d0b384742fa49bde6a24fb1b70da2dad98e730ae
 -vendor/lib64/libqdpr.so|786c37688cb3ff4e5925fdd23f202444f205a50f
--vendor/lib64/libqms.so|f6d3c024766705d1a782dc139f6074082b25bbfe
 -vendor/lib64/libqms_client.so|454e3b687f889572d7293b375b7caad74a621250
 -vendor/lib64/libril-db.so|fb8b1f87f1d91e67e05ed6200aedd80778e6ec79
 -vendor/lib64/libril-legacy.so|86ae46d28629df865be8aec5623c22403b797c7d
