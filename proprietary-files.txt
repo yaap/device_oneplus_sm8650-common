@@ -1207,7 +1207,6 @@ odm/etc/init/init.oplus.sensor.rc
 odm/etc/init/vendor-oplus-hardware-oplusSensor-V1-service.rc
 odm/etc/vintf/manifest/manifest_oplusSensor_aidl.xml
 odm/lib64/liboplus_service.so
-odm/lib64/vendor.oplus.hardware.oplusSensor-V1-ndk.so
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate-service
 vendor/bin/init.qcom.sensors.sh
 vendor/bin/sensors.qti
