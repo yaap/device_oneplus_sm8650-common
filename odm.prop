@@ -30,11 +30,5 @@ ro.vendor.oplus.radio.esim.feature=2
 ro.vendor.oplus.radio.project=1   
 ro.vendor.oplus.radio.sar_regionmark=EUEX
 
-# Sensors
-ro.vendor.oplus.sensor.high_pwm_rgb=true
-ro.vendor.oplus.sensor.brl_receive=true
-ro.vendor.oplus.sensor.lb_algo=true
-ro.vendor.oplus.sensor.use_black_mode=true
-
 # SVN
 ro.build.version.svn=57
