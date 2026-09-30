@@ -113,7 +113,6 @@ mem_buf_dev.ko
 mem_buf.ko
 mem_buf_msgq.ko
 memlat.ko
-mem-offline.ko
 memory_dump_v2.ko
 mhi_dev_satellite.ko
 mhi_dev_uci.ko
