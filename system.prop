@@ -1,2 +1,3 @@
 # lmkd
 ro.lmk.swap_compression_ratio=2
+ro.lmk.relaxed_available_memory=true
