@@ -20,6 +20,10 @@
     "target_path": "vendor/oneplus/sm8650-common"
   },
   {
+    "repository": "vendor_oneplus_sm8650-oss",
+    "target_path": "vendor/oneplus/sm8650-oss"
+  },
+  {
     "repository": "packages_apps_TouchGestures",
     "target_path": "packages/apps/TouchGestures"
   },
