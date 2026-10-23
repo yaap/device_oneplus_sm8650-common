@@ -82,10 +82,6 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             grep -q "libbase_shim.so" "${2}" || "${PATCHELF}" --add-needed "libbase_shim.so" "${2}"
             ;;
-        odm/etc/init/init.touchDaemon.rc)
-            [ "$2" = "" ] && return 0
-            sed -i "7i\    task_profiles ProcessCapacityHigh MaxPerformance" "${2}"
-            ;;
         odm/etc/permissions/vendor-oplus-hardware-charger.xml)
             [ "$2" = "" ] && return 0
             sed -i "s|/system/system_ext|/system_ext|g" "${2}"
@@ -127,9 +123,7 @@ function blob_fixup() {
         vendor/lib64/libdpps.so|vendor/lib64/libsnapdragoncolor-manager.so \
        |odm/lib64/libdisplaycolorfeature.so \
        |odm/lib64/libdisplayfossfeature_nature.so \
-       |vendor/bin/qvrdatauploader \
-       |odm/bin/hw/vendor-oplus-hardware-touch-V2-service \
-       |odm/bin/touchDaemon)
+       |vendor/bin/qvrdatauploader)
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libtinyxml2.so" "libtinyxml2_stock.so" "${2}"
             ;;
