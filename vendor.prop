@@ -240,6 +240,7 @@ vendor.gatekeeper.disable_spu=true
 vendor.gatekeeper.is_security_level_spu=0
 
 # Graphics
+debug.renderengine.backend=skiavkthreaded
 debug.sf.disable_client_composition_cache=0
 debug.sf.auto_latch_unsignaled=0
 debug.sf.early.app.duration.144=10333333
