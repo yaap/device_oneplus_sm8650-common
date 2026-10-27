@@ -8,6 +8,9 @@
     <!-- Show high touch polling rate -->
     <bool name="config_supportHighTouchRate">true</bool>
 
+    <!-- Show edge grip suppression width -->
+    <bool name="config_supportEdgeGripSuppression">true</bool>
+
     <!-- Show DC Dim settings and schedule -->
     <bool name="config_showDcDimSettings">true</bool>
 

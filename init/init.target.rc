@@ -142,6 +142,10 @@ on boot
     chmod 0660 /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/synaptics_tcm_hbp.0/glove_mode
     chown system system /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi1/spi1.0/synaptics_tcm_hbp.0/glove_mode
     chmod 0660 /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi1/spi1.0/synaptics_tcm_hbp.0/glove_mode
+    chown system system /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/synaptics_tcm_hbp.0/grip_abs_dark_x
+    chmod 0660 /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/synaptics_tcm_hbp.0/grip_abs_dark_x
+    chown system system /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi1/spi1.0/synaptics_tcm_hbp.0/grip_abs_dark_x
+    chmod 0660 /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi1/spi1.0/synaptics_tcm_hbp.0/grip_abs_dark_x
     chown system system /sys/kernel/oplus_display/adfr_config
     chmod 0660 /sys/kernel/oplus_display/adfr_config
     chown system system /sys/devices/platform/soc/soc:uim2-switch/uim2_state
@@ -321,6 +325,60 @@ on property:persist.vendor.high_touch_rate=1 && property:vendor.post_boot.parsed
 on property:persist.vendor.high_touch_rate=0 && property:vendor.post_boot.parsed=1
     write /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/synaptics_tcm_hbp.0/high_rate 0
     write /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi1/spi1.0/synaptics_tcm_hbp.0/high_rate 0
+
+on property:debug.edge_grip_suppression=0
+    setprop persist.vendor.edge_grip_suppression 0
+    write /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/synaptics_tcm_hbp.0/grip_abs_dark_x 0
+    write /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi1/spi1.0/synaptics_tcm_hbp.0/grip_abs_dark_x 0
+
+on property:debug.edge_grip_suppression=1
+    setprop persist.vendor.edge_grip_suppression 1
+    write /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/synaptics_tcm_hbp.0/grip_abs_dark_x 1
+    write /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi1/spi1.0/synaptics_tcm_hbp.0/grip_abs_dark_x 1
+
+on property:debug.edge_grip_suppression=2
+    setprop persist.vendor.edge_grip_suppression 2
+    write /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/synaptics_tcm_hbp.0/grip_abs_dark_x 2
+    write /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi1/spi1.0/synaptics_tcm_hbp.0/grip_abs_dark_x 2
+
+on property:debug.edge_grip_suppression=3
+    setprop persist.vendor.edge_grip_suppression 3
+    write /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/synaptics_tcm_hbp.0/grip_abs_dark_x 3
+    write /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi1/spi1.0/synaptics_tcm_hbp.0/grip_abs_dark_x 3
+
+on property:debug.edge_grip_suppression=4
+    setprop persist.vendor.edge_grip_suppression 4
+    write /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/synaptics_tcm_hbp.0/grip_abs_dark_x 4
+    write /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi1/spi1.0/synaptics_tcm_hbp.0/grip_abs_dark_x 4
+
+on property:debug.edge_grip_suppression=5
+    setprop persist.vendor.edge_grip_suppression 5
+    write /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/synaptics_tcm_hbp.0/grip_abs_dark_x 5
+    write /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi1/spi1.0/synaptics_tcm_hbp.0/grip_abs_dark_x 5
+
+on property:persist.vendor.edge_grip_suppression=0 && property:vendor.post_boot.parsed=1
+    write /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/synaptics_tcm_hbp.0/grip_abs_dark_x 0
+    write /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi1/spi1.0/synaptics_tcm_hbp.0/grip_abs_dark_x 0
+
+on property:persist.vendor.edge_grip_suppression=1 && property:vendor.post_boot.parsed=1
+    write /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/synaptics_tcm_hbp.0/grip_abs_dark_x 1
+    write /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi1/spi1.0/synaptics_tcm_hbp.0/grip_abs_dark_x 1
+
+on property:persist.vendor.edge_grip_suppression=2 && property:vendor.post_boot.parsed=1
+    write /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/synaptics_tcm_hbp.0/grip_abs_dark_x 2
+    write /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi1/spi1.0/synaptics_tcm_hbp.0/grip_abs_dark_x 2
+
+on property:persist.vendor.edge_grip_suppression=3 && property:vendor.post_boot.parsed=1
+    write /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/synaptics_tcm_hbp.0/grip_abs_dark_x 3
+    write /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi1/spi1.0/synaptics_tcm_hbp.0/grip_abs_dark_x 3
+
+on property:persist.vendor.edge_grip_suppression=4 && property:vendor.post_boot.parsed=1
+    write /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/synaptics_tcm_hbp.0/grip_abs_dark_x 4
+    write /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi1/spi1.0/synaptics_tcm_hbp.0/grip_abs_dark_x 4
+
+on property:persist.vendor.edge_grip_suppression=5 && property:vendor.post_boot.parsed=1
+    write /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi0/spi0.0/synaptics_tcm_hbp.0/grip_abs_dark_x 5
+    write /sys/devices/platform/soc/ac0000.qcom,qupv3_1_geni_se/a90000.spi/spi_master/spi1/spi1.0/synaptics_tcm_hbp.0/grip_abs_dark_x 5
 
 on property:debug.touch_sensitivity_mode=1
     setprop persist.vendor.touch_sensitivity_mode 1
