@@ -374,12 +374,10 @@ TARGET_BUILD_LINDROID := true
 
 # Logging
 SPAMMY_LOG_TAGS := \
-    OplusTouchDaemon \
     vendor.qti.bluetooth@1.1-wake_lock \
     vendor.qti.bluetooth@1.1-ibs_handler \
     IRIS_LOG_SERV_I7 \
     SDM \
-    synaLib \
     CwbService \
     occe_create \
     DisplayModeController \
