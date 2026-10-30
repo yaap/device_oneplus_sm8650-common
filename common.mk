@@ -36,6 +36,11 @@ SOONG_CONFIG_NAMESPACES += android_hardware_audio
 SOONG_CONFIG_android_hardware_audio += \
     run_64bit
 SOONG_CONFIG_android_hardware_audio_run_64bit := true
+$(call soong_config_set,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
+$(call soong_config_set,qtiaudio,pal_prefer_master_gain,true)
+$(call soong_config_set,qtiaudio,feature_agm_hidl,true)
+$(call soong_config_set,qtiaudio,feature_lsm_hidl,true)
+$(call soong_config_set,qtiaudio,feature_pal_hidl,true)
 
 PRODUCT_PACKAGES += \
     android.hardware.audio@7.1-impl \
@@ -44,28 +49,24 @@ PRODUCT_PACKAGES += \
     android.hardware.bluetooth.audio-impl \
     android.hardware.soundtrigger@2.3-impl \
     audio.bluetooth.default \
+    audio.primary.pineapple \
     audio.usb.default \
     audio.r_submix.default \
     libagmmixer \
+    libagm \
+    libats \
     libagm_compress_plugin \
     libagm_mixer_plugin \
     libagm_pcm_plugin \
-    libats \
-    libar-acdb \
-    libar-gpr \
-    libar-gsl \
     libaudiochargerlistener \
-    libats \
     libbatterylistener \
     lib_bt_aptx \
     lib_bt_ble \
     lib_bt_bundle \
     libfmpal \
-    libhfp_pal \
     libhotword_intf \
     libcustomva_intf \
-    liblx-ar_util \
-    liblx-osal \
+    libhfp_pal \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
@@ -73,16 +74,12 @@ PRODUCT_PACKAGES += \
     libtinycompress \
     libvolumelistener \
     sound_trigger.primary.pineapple \
-    vendor.qti.hardware.AGMIPC@1.0 \
-    vendor.qti.hardware.AGMIPC@1.0-impl \
     vendor.qti.audio-adsprpc-service.rc
 
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8650/audio/primary-hal
 CONFIG_HAL_SRC_DIR := $(AUDIO_HAL_DIR)/configs/pineapple
 CONFIG_PAL_SRC_DIR := $(AUDIO_HAL_DIR)/../pal/configs/pineapple
 QCV_FAMILY_SKUS := pineapple cliffs
-
-$(call soong_config_set,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
 
 PRODUCT_COPY_FILES += \
 $(foreach DEVICE_SKU, $(QCV_FAMILY_SKUS), \
@@ -94,8 +91,7 @@ PRODUCT_COPY_FILES += \
     $(AUDIO_HAL_DIR)/configs/common/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
     $(CONFIG_PAL_SRC_DIR)/card-defs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/card-defs.xml \
     $(CONFIG_HAL_SRC_DIR)/microphone_characteristics.xml:$(TARGET_COPY_OUT_VENDOR)/etc/microphone_characteristics.xml \
-    $(CONFIG_PAL_SRC_DIR)/Hapticsconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/Hapticsconfig.xml \
-    $(CONFIG_PAL_SRC_DIR)/usecaseKvManager.xml:$(TARGET_COPY_OUT_VENDOR)/etc/usecaseKvManager.xml
+    $(CONFIG_PAL_SRC_DIR)/Hapticsconfig.xml:$(TARGET_COPY_OUT_VENDOR)/etc/Hapticsconfig.xml
 
 PRODUCT_COPY_FILES += \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \

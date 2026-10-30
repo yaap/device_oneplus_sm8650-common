@@ -70,6 +70,10 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "android.hardware.secure_element-V1-ndk.so" "android.hardware.secure_element-V1-ndk_odm.so" "${2}"
             ;;
+        odm/etc/resourcemanager.xml)
+            [ "$2" = "" ] && return 0
+            sed -i "s|\(<speaker_protection_enabled>\)1\(</speaker_protection_enabled>\)|\10\2|" "${2}"
+            ;;
         odm/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc)
             [ "$2" = "" ] && return 0
             sed -i "8i\    task_profiles ProcessCapacityHigh MaxPerformance" "${2}"
