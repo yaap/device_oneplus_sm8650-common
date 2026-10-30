@@ -810,10 +810,6 @@ odm/lib64/libosenseaidlhalclient.so
 odm/lib64/libosensenativeproxy_client.so
 
 # OPLUS Charger
-odm/bin/hw/gauged
-odm/bin/hw/vendor.oplus.hardware.charger-V11-service
-odm/bin/hw/wlschgd
-odm/etc/init/vendor.oplus.hardware.charger-V11-service.rc
 odm/etc/vintf/manifest/manifest_oplus_charger_aidl.xml
 odm/etc/charge.cfg
 odm/lib64/libGaiaClient_vnd.so
@@ -1174,10 +1170,7 @@ vendor/lib64/libsxrservice_client.qti.so
 
 # Sensors
 odm/bin/oplus_sensor_fb
-odm/bin/hw/vendor-oplus-hardware-oplusSensor-V1-service
 odm/etc/init/init.oplus.sensor.rc
-odm/etc/init/vendor-oplus-hardware-oplusSensor-V1-service.rc
-odm/etc/vintf/manifest/manifest_oplusSensor_aidl.xml
 odm/lib64/liboplus_service.so
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate-service
 vendor/bin/init.qcom.sensors.sh

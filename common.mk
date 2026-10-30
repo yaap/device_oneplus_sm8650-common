@@ -556,7 +556,8 @@ PRODUCT_PACKAGES += \
     libsensorndkbridge \
     sensors.dynamic_sensor_hal \
     sensors.oplus \
-    sensors.fusionlight
+    sensors.fusionlight \
+    vendor-oplus-hardware-oplusSensor-V1-service
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
@@ -574,6 +575,12 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.relative_humidity.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.relative_humidity.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepcounter.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepdetector.xml
+
+# Charger
+PRODUCT_PACKAGES += \
+    vendor.oplus.hardware.charger-V11-service \
+    gauged \
+    wlschgd
 
 # Sensors (wake)
 $(call soong_config_set,oplus_sensors,uses_tap_sensor,true)
