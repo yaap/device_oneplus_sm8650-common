@@ -70,10 +70,6 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "android.hardware.secure_element-V1-ndk.so" "android.hardware.secure_element-V1-ndk_odm.so" "${2}"
             ;;
-        odm/etc/resourcemanager.xml)
-            [ "$2" = "" ] && return 0
-            sed -i "s|\(<speaker_protection_enabled>\)1\(</speaker_protection_enabled>\)|\10\2|" "${2}"
-            ;;
         vendor/etc/audio/sku_*/audio_policy_configuration.xml)
             [ "$2" = "" ] && return 0
             sed -i '/Bluetooth Audio HAL for hearing aid/d; /bluetooth_qti_hearing_aid_audio_policy_configuration.xml/d' "${2}"

@@ -17,6 +17,16 @@ on boot
     # Audio HAL feedback
     chown media media /proc/mm_fb
 
+    # TFA98xx calibration sysfs
+    chown audioserver audio /sys/bus/i2c/devices/4-0034/reg
+    chmod 0660 /sys/bus/i2c/devices/4-0034/reg
+    chown audioserver audio /sys/bus/i2c/devices/4-0034/rw
+    chmod 0660 /sys/bus/i2c/devices/4-0034/rw
+    chown audioserver audio /sys/bus/i2c/devices/4-0035/reg
+    chmod 0660 /sys/bus/i2c/devices/4-0035/reg
+    chown audioserver audio /sys/bus/i2c/devices/4-0035/rw
+    chmod 0660 /sys/bus/i2c/devices/4-0035/rw
+
     # Wireless charge
     chown system system /proc/wireless/enable_tx
     chmod 0666 /proc/wireless/enable_tx
@@ -45,6 +55,12 @@ on post-fs-data
     mkdir /data/system/camera_rus 0777 cameraserver  cameraserver
     chown system system /sys/kernel/ois_control/dump_registers
 
+    # Audio calibration
+    mkdir /mnt/vendor/persist/media 0770 audioserver audio
+    chown audioserver audio /mnt/vendor/persist/media
+    chmod 0770 /mnt/vendor/persist/media
+    restorecon /mnt/vendor/persist/media
+
     # Display
     chown system system /sys/kernel/oplus_dc_dim/dc_dim_enable
     chmod 0666 /sys/kernel/oplus_dc_dim/dc_dim_enable
@@ -54,6 +70,16 @@ on property:ro.boot.prjname=*
     setprop ro.separate.soft ${ro.boot.prjname}
 
 on property:sys.boot_completed=1
+    # Re-apply TFA98xx sysfs permissions in case the driver probed late
+    chown audioserver audio /sys/bus/i2c/devices/4-0034/reg
+    chmod 0660 /sys/bus/i2c/devices/4-0034/reg
+    chown audioserver audio /sys/bus/i2c/devices/4-0034/rw
+    chmod 0660 /sys/bus/i2c/devices/4-0034/rw
+    chown audioserver audio /sys/bus/i2c/devices/4-0035/reg
+    chmod 0660 /sys/bus/i2c/devices/4-0035/reg
+    chown audioserver audio /sys/bus/i2c/devices/4-0035/rw
+    chmod 0660 /sys/bus/i2c/devices/4-0035/rw
+
     # Charger
     chown system system /sys/module/oplus_gauge/parameters/gauge_dbg_tbat
     chown system system /sys/module/oplus_gauge/parameters/gauge_dbg_ibat
